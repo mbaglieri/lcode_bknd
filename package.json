@@ -60,7 +60,7 @@
     "json-merger": "^1.1.7",
     "jsonwebtoken": "^8.5.1",
     "knex": "^1.0.2",
-    "moment": "^2.29.1",
+    "moment": "^2.29.4",
     "mongodb": "^4.4.1",
     "mongoose": "^6.2.0",
     "mongoose-subquery": "^2.1.0",
