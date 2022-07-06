@@ -1,0 +1,672 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="initial-scale=1.0"/>
+<meta name="format-detection" content="telephone=no"/>
+<title><%= title%></title>
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,300|Roboto:400,300,700&subset=latin,cyrillic,greek" rel="stylesheet" type="text/css">
+<!--[if mso]>
+<style type="text/css">
+td,span,a{font-family: Arial, sans-serif !important;}
+</style>
+<![endif]-->
+<style type="text/css">
+
+    /* Resets: see reset.css for details */
+    .ReadMsgBody { width: 100%; background-color: #ffffff;}
+    .ExternalClass {width: 100%; background-color: #ffffff;}
+    .ExternalClass, .ExternalClass p, .ExternalClass span,
+    .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height:100%;}
+    #outlook a{ padding:0;}
+    body{width: 100%; height: 100%; background-color: #ffffff; margin:0; padding:0;}
+    body{ -webkit-text-size-adjust:none; -ms-text-size-adjust:none; }
+    html{width:100%;}
+    table {mso-table-lspace:0pt; mso-table-rspace:0pt; border-spacing:0;}
+    table td {border-collapse:collapse;}
+    table p{margin:0;}
+    br, strong br, b br, em br, i br { line-height:100%; }
+    div, p, a, li, td { -webkit-text-size-adjust:none; -ms-text-size-adjust:none;}
+    h1, h2, h3, h4, h5, h6 { line-height: 100% !important; -webkit-font-smoothing: antialiased; }
+    span a { text-decoration: none !important;}
+    a{ text-decoration: none !important; }
+    img{height: auto !important; line-height: 100%; outline: none; text-decoration: none; display:block !important; -ms-interpolation-mode:bicubic;}
+    .yshortcuts, .yshortcuts a, .yshortcuts a:link,.yshortcuts a:visited,
+    .yshortcuts a:hover, .yshortcuts a span { text-decoration: none !important; border-bottom: none !important;}
+    /*mailChimp class*/
+    .default-edit-image{
+    height:20px;
+    }
+    ul{padding-left:10px; margin:0;}
+    
+    .tpl-repeatblock {
+    padding: 0px !important;
+    border: 1px dotted rgba(0,0,0,0.2);
+    }
+    @media only screen and (max-width: 640px){
+    /* mobile setting */
+    table[class="container"]{width:100%!important; max-width:100%!important; min-width:100%!important;
+    padding-left:20px!important; padding-right:20px!important; text-align: center!important; clear: both;}
+    td[class="container"]{width:100%!important; padding-left:20px!important; padding-right:20px!important; clear: both;}
+    table[class="full-width"]{width:100%!important; max-width:100%!important; min-width:100%!important; clear: both;}
+    table[class="full-width-center"] {width: 100%!important; max-width:100%!important;  text-align: center!important; clear: both; margin:0 auto; float:none;}
+    table[class="force-240-center"]{width:240px !important; clear: both; margin:0 auto; float:none;}
+    table[class="auto-center"] {width: auto!important; max-width:100%!important;  text-align: center!important; clear: both; margin:0 auto; float:none;}
+    *[class="auto-center-all"]{width: auto!important; max-width:75%!important;  text-align: center!important; clear: both; margin:0 auto; float:none;}
+    *[class="auto-center-all"] * {width: auto!important; max-width:100%!important;  text-align: center!important; clear: both; margin:0 auto; float:none;}
+    table[class="col-3"],table[class="col-3-not-full"]{width:30.35%!important; max-width:100%!important;}
+    table[class="col-2"]{width:47.3%!important; max-width:100%!important;}
+    *[class="full-block"]{width:100% !important; display:block !important;}
+    /* image */
+    td[class="image-full-width"] img{width:100% !important; height:auto !important; max-width:100% !important;}
+    /* helper */
+    table[class="space-w-20"]{width:3.57%!important; max-width:20px!important; min-width:3.5% !important;}
+    table[class="space-w-20"] td:first-child{width:3.5%!important; max-width:20px!important; min-width:3.5% !important;}
+    table[class="space-w-25"]{width:4.45%!important; max-width:25px!important; min-width:4.45% !important;}
+    table[class="space-w-25"] td:first-child{width:4.45%!important; max-width:25px!important; min-width:4.45% !important;}
+    table[class="space-w-30"] td:first-child{width:5.35%!important; max-width:30px!important; min-width:5.35% !important;}
+    table[class="fix-w-20"]{width:20px!important; max-width:20px!important; min-width:20px!important;}
+    table[class="fix-w-20"] td:first-child{width:20px!important; max-width:20px!important; min-width:20px !important;}
+    *[class="h-10"]{display:block !important;  height:10px !important;}
+    *[class="h-20"]{display:block !important;  height:20px !important;}
+    *[class="h-30"]{display:block !important; height:30px !important;}
+    *[class="h-40"]{display:block !important;  height:40px !important;}
+    *[class="remove-640"]{display:none !important;}
+    *[class="text-left"]{text-align:left !important;}
+    *[class="clear-pad"]{padding:0 !important;}
+    }
+    @media only screen and (max-width: 479px){
+    /* mobile setting */
+    table[class="container"]{width:100%!important; max-width:100%!important; min-width:124px!important;
+    padding-left:15px!important; padding-right:15px!important; text-align: center!important; clear: both;}
+    td[class="container"]{width:100%!important; padding-left:15px!important; padding-right:15px!important; text-align: center!important; clear: both;}
+    table[class="full-width"],table[class="full-width-479"]{width:100%!important; max-width:100%!important; min-width:124px!important; clear: both;}
+    table[class="full-width-center"] {width: 100%!important; max-width:100%!important; min-width:124px!important; text-align: center!important; clear: both; margin:0 auto; float:none;}
+    *[class="auto-center-all"]{width: 100%!important; max-width:100%!important;  text-align: center!important; clear: both; margin:0 auto; float:none;}
+    *[class="auto-center-all"] * {width: auto!important; max-width:100%!important;  text-align: center!important; clear: both; margin:0 auto; float:none;}
+    table[class="col-3"]{width:100%!important; max-width:100%!important; text-align: center!important; clear: both;}
+    table[class="col-3-not-full"]{width:30.35%!important; max-width:100%!important; }
+    table[class="col-2"]{width:100%!important; max-width:100%!important; text-align: center!important; clear: both;}
+    *[class="full-block-479"]{display:block !important; width:100% !important; clear: both; }
+    /* image */
+    td[class="image-full-width"] img{width:100% !important; height:auto !important; max-width:100% !important; min-width:124px !important;}
+    td[class="image-min-80"] img{width:100% !important; height:auto !important; max-width:100% !important; min-width:80px !important;}
+    td[class="image-min-100"] img{width:100% !important; height:auto !important; max-width:100% !important; min-width:100px !important;}
+    /* halper */
+    table[class="space-w-20"]{width:100%!important; max-width:100%!important; min-width:100% !important;}
+    table[class="space-w-20"] td:first-child{width:100%!important; max-width:100%!important; min-width:100% !important;}
+    table[class="space-w-25"]{width:100%!important; max-width:100%!important; min-width:100% !important;}
+    table[class="space-w-25"] td:first-child{width:100%!important; max-width:100%!important; min-width:100% !important;}
+    table[class="space-w-30"]{width:100%!important; max-width:100%!important; min-width:100% !important;}
+    table[class="space-w-30"] td:first-child{width:100%!important; max-width:100%!important; min-width:100% !important;}
+    *[class="remove-479"]{display:none !important;}
+    table[width="595"]{
+    width:100% !important;
+    }
+    }
+    td ul{list-style: initial; margin:0; padding-left:20px;}.default-edit-image{height:20px;} tr.tpl-repeatblock , tr.tpl-repeatblock > td{ display:block !important;} .tpl-repeatblock {padding: 0px !important;border: 1px dotted rgba(0,0,0,0.2);} table[width="595"]{width:100% !important;}</style>
+<!--[if gte mso 9]><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]-->
+</head>
+<body  style="font-size:12px; width:100%; height:100%;">
+<table id="mainStructure" width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color:#f4f6f7;">
+        <!-- START LAYOUT-1 ( VIEW ONLINE / SOCIAL ICON )-->
+        <tr>
+          <td valign="top" align="center" style="background-color:#ff900e; border-bottom:1px solid #e8e8e8;" class="container">
+            <!-- start container -->
+            <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" style="background-color:#ff900e; min-width:600px; margin:0 auto; padding-left:20px; padding-right:20px;" class="container">
+              <tr>
+                <td valign="top" align="center">
+                  <table width="560" border="0" cellspacing="0" cellpadding="0" align="center" class="full-width" style="margin:0 auto;">
+                    <!-- start space -->
+                    <tr>
+                      <td valign="top" height="20" >
+                      </td>
+                    </tr>
+                    <!-- end space -->
+                    <tr>
+                      <td valign="top" align="center">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                          <tr>
+                            <td valign="middle" align="center"><table width="auto" align="left" border="0" cellspacing="0" cellpadding="0" class="full-width-center" dir="ltr">
+                                <tr>
+                                  <td align="center" style="font-size: 14px; line-height: 24px; color: rgb(255, 255, 255); font-weight: normal; text-align: center; font-family: 'Open Sans', Arial, Helvetica, sans-serif; word-break: break-word;">
+                                    <span style="text-decoration: none; color: rgb(255, 255, 255); font-size: inherit; line-height: 24px;">
+                                      <a href="#" style="color: rgb(255, 255, 255); font-size: inherit; line-height: 24px; text-decoration: none;">View Online</a>
+                                    </span>
+                                  </td>
+                                </tr>
+                              </table><!--[if (gte mso 9)|(IE)]></td><td valign="top"><![endif]--><table width="20" border="0" cellpadding="0" cellspacing="0" align="left" class="full-width" style="height:1px; mso-table-lspace:0pt; mso-table-rspace:0pt; border-spacing:0;" dir="ltr">
+                                <tr>
+                                  <td height="1" class="h-20" >
+                                  </td>
+                                </tr>
+                              </table><!--[if (gte mso 9)|(IE)]></td><td valign="top"><![endif]--><table width="auto" align="right" border="0" cellpadding="0" cellspacing="0" class="full-width-center" dir="ltr">
+                                <tr>
+                                  <td valign="middle">
+                                    <table width="auto" align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+                                      <tr>
+                                         <% if (social.facebook.active) { %>
+                                        <td align="center" valign="middle" style="padding-left:3px; padding-right:3px;">
+                                          <a href="<%=social.facebook.url%>" style="font-size: inherit; text-decoration: none;">
+                                            <img src="website.com/images/set1-social-facebook-white.png" width="25" alt="facebook" style="max-width: 25px; display: block !important;">
+                                          </a>
+                                        </td>
+                                        <% } %>
+                                        <% if (social.twitter.active) { %>
+                                        <td align="center" valign="middle" style="padding-left:3px; padding-right:3px;">
+                                          <a href="<%=social.twitter.url%>" style="font-size: inherit; text-decoration: none;">
+                                            <img src="website.com/images/set1-social-twitter-white.png" width="25" alt="twitter" style="max-width: 25px; display: block !important;">
+                                          </a>
+                                        </td>
+                                        <% } %>
+                                        <% if (social.googleplus.active) { %>
+                                        <td align="center" valign="middle" style="padding-left:3px; padding-right:3px;">
+                                          <a href="<%=social.googleplus.url%>" style="font-size: inherit; text-decoration: none;">
+                                            <img src="website.com/images/set1-social-googleplus-white.png" width="25" alt="googleplus" style="max-width: 25px; display: block !important;">
+                                          </a>
+                                        </td>
+                                        <% } %>
+                                        <% if (social.rss.active) { %>
+                                        <td align="center" valign="middle" style="padding-left:3px; padding-right:3px;">
+                                          <a href="<%=social.rss.url%>" style="font-size: inherit; text-decoration: none;">
+                                            <img src="website.com/images/set1-social-rss-white.png" width="25" alt="rss" style="max-width: 25px; display: block !important;">
+                                          </a>
+                                        </td>
+                                        <% } %>
+                                        <% if (social.youtube.active) { %>
+                                        <td align="center" valign="middle" style="padding-left:3px; padding-right:3px;">
+                                          <a href="<%=social.youtube.url%>" style="font-size: inherit; text-decoration: none;">
+                                            <img src="website.com/images/set1-social-youtube-white.png" width="25" alt="youtube" style="max-width: 25px; display: block !important;">
+                                          </a>
+                                        </td>
+                                        <% } %>
+                                        <% if (social.vimeo.active) { %>
+                                        <td align="center" valign="middle" style="padding-left:3px; padding-right:3px;">
+                                          <a href="<%=social.vimeo.url%>" style="font-size: inherit; text-decoration: none;">
+                                            <img src="website.com/images/set1-social-vimeo-white.png" width="25" alt="vimeo" style="max-width: 25px; display: block !important;">
+                                          </a>
+                                        </td>
+                                        <% } %>
+                                        <% if (social.pinterest.active) { %>
+                                        <td align="center" valign="middle" style="padding-left:3px; padding-right:3px;">
+                                          <a href="<%=social.pinterest.url%>" style="font-size: inherit; text-decoration: none;">
+                                            <img src="website.com/images/set1-social-pinterest-white.png" width="25" alt="pinterest" style="max-width: 25px; display: block !important;">
+                                          </a>
+                                        </td>
+                                        <% } %>
+                                        <% if (social.linkedin.active) { %>
+                                        <td align="center" valign="middle" style="padding-left:3px; padding-right:3px;">
+                                          <a href="<%=social.linkedin.url%>" style="font-size: inherit; text-decoration: none;">
+                                            <img src="website.com/images/set1-social-linkedin-white.png" width="25" alt="linkedin" style="max-width: 25px; display: block !important;">
+                                          </a>
+                                        </td>
+                                        <% } %>
+                                        <% if (social.instagram.active) { %>
+                                        <td align="center" valign="middle" style="padding-left:3px; padding-right:3px;">
+                                          <a href="<%=social.instagram.url%>" style="font-size: inherit; text-decoration: none;">
+                                            <img src="website.com/images/set1-social-instagram-white.png" width="25" alt="instagram" style="max-width: 25px; display: block !important;">
+                                          </a>
+                                        </td>
+                                        <% } %>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <!-- start space -->
+                    <tr>
+                      <td valign="top" height="20" >
+                      </td>
+                    </tr>
+                    <!-- end space -->
+                  </table>
+                </td>
+              </tr> 
+            </table>
+            <!-- end container -->
+          </td>
+        </tr>
+        <!-- END LAYOUT-1 ( VIEW ONLINE / SOCIAL ICON )-->
+      
+        <!-- END LAYOUT-17 ( BACKGROUND-IMAGE / TEXT / BUTTON ) -->
+        <tr>
+          <td valign="top" align="center" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(232, 232, 232); background-image: url(website.com/images/set1-header-bg.jpg); background-color: rgb(233, 239, 244); background-size: cover; background-position: 50% 50%; background-repeat: no-repeat !important;" class="container">
+            <!-- start container -->
+            <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" class="container" style="min-width:600px; margin:0 auto; padding-left:20px; padding-right:20px;">
+              <tr>
+                <td valign="top" align="center">
+                  <table width="560" border="0" cellspacing="0" cellpadding="0" align="center" class="full-width" style="margin:0 auto;">
+                    <!-- start space -->
+                    <tr>
+                      <td valign="top" height="100" >
+                      </td>
+                    </tr>
+                    <!-- end space -->
+                    <tr>
+                      <td valign="top" align="center">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                          <!-- start title -->
+                          <tr dup="0">
+                            <td valign="top" align="center">
+                              <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" class="full-width-center" style="margin:0 auto;">
+                                <tr>
+                                  <td align="center" style="font-size: 28px; color: rgb(51, 51, 51); font-weight: normal; text-align: center; font-family: 'Open Sans', Arial, Helvetica, sans-serif; word-break: break-word;">
+                                    <span style="color: rgb(51, 51, 51); font-weight: normal; font-size: inherit; line-height: 28px;">
+                                     Activa tu cuenta
+                                      <span style="font-weight: bold; font-size: inherit; line-height: 28px;">CODIGO:</span> 
+                                      <span style="color: rgb(255, 144, 14); font-size: inherit; line-height: 28px;"><%=code%></span>
+                                    </span>
+                                  </td>
+                                </tr>
+                                <!-- start space -->
+                                <tr>
+                                  <td valign="top" height="20" >
+                                  </td>
+                                </tr>
+                                <!-- end space -->
+                              </table>
+                            </td>
+                          </tr>
+                          <!-- end title -->
+
+                          <!-- start content -->
+                          <tr dup="0">
+                            <td valign="top">
+                              <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td align="center" style="font-size: 14px; line-height: 24px; color: rgb(136, 136, 136); font-weight: normal; text-align: center; font-family: 'Open Sans', Arial, Helvetica, sans-serif; word-break: break-word;">
+                                    <span style="text-decoration: none; color: rgb(136, 136, 136); font-weight: normal; font-size: inherit; line-height: 24px;">
+                                      <%= subtitle %>
+                                    </span>
+                                  </td>
+                                </tr>
+                                <!-- start space -->
+                                <tr>
+                                  <td valign="top" height="30" >
+                                  </td>
+                                </tr>
+                                <!-- end space -->
+                              </table>
+                            </td>
+                          </tr>
+                          <!-- end content -->
+                          
+                          
+                          <!--start button-->
+                          <tr>
+                            <td valign="top" align="center">
+                              <table width="auto" align="center" border="0" cellspacing="0" cellpadding="0" style="margin:0 auto;">
+                                <tr>
+                                  <!-- start duplicate button -->
+                                  <td valign="top" class="full-block-479" dup="0">
+                                    <table width="auto" border="0" align="center" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+                                      <tr>
+                                        <td valign="top" style="padding-top:5px; padding-bottom:5px; padding-left:5px; padding-right:5px;">
+                                          <table width="auto" border="0" align="center" cellpadding="0" cellspacing="0" style="border-radius: 5px; background-color:#ff900e;">
+                                            <tr>
+                                              <td width="auto" align="center" valign="middle" height="45" style="font-size: 14px; color: rgb(255, 255, 255); font-weight: normal; text-align: center; font-family: 'Open Sans', Arial, Helvetica, sans-serif; padding-left: 25px; padding-right: 25px; word-break: break-word; background-clip: padding-box;">
+                                                <span style="color: rgb(255, 255, 255); font-weight: bold; font-size: inherit; line-height: 24px;">
+                                                  <a href="#" style="color: rgb(255, 255, 255); font-size: inherit; line-height: 24px; text-decoration: none;">
+                                                    VERIFY EMAIL
+                                                  </a>
+                                                </span>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                  <!-- end duplicate button -->
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <!--end button-->
+                        
+                        </table>
+                      </td>
+                    </tr>
+
+                     <!-- start space -->
+                      <tr>
+                        <td valign="top" height="100" >
+                        </td>
+                      </tr>
+                      <!-- end space -->
+                    
+                  </table>
+                </td>
+              </tr>
+              
+            </table>
+            <!-- end container -->
+          </td>
+        </tr>
+        <!-- END LAYOUT-17 ( BACKGROUND-IMAGE / TEXT / BUTTON ) -->
+      
+        <!--START LAYOUT-18 ( CONTACT US / ABOUT US )  -->
+        <tr>
+          <td align="center" valign="top" class="container" style="background-color: #f4f6f7; border-bottom:1px solid #e8e8e8;">
+            <!-- start container -->
+            <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" class="container" style="background-color:#f4f6f7; min-width:600px; margin:0 auto; padding-left:20px; padding-right:20px;">
+             
+              <!-- start content container-->
+              <tr>
+                <td valign="top">
+                  <table width="560" align="center" border="0" cellpadding="0" cellspacing="0" class="full-width" style="margin:0 auto;">
+                   <!-- start space -->
+                  <tr>
+                    <td valign="top" height="50" >
+                    </td>
+                  </tr>
+                  <!-- end space -->
+                    <tr>
+                      <td valign="top">
+                        <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td valign="top" align="center"><table width="265" align="left" border="0" cellpadding="0" cellspacing="0" class="col-2" dir="ltr">
+
+                              <!-- start title -->
+                              <tr dup="0">
+                                <td valign="top" align="left">
+                                  <table width="100%" align="left" border="0" cellspacing="0" cellpadding="0" style="margin:0 auto;">
+                                    <tr>
+                                      <td align="left" style="font-size: 18px; line-height: 24px; color: rgb(51, 51, 51); font-weight: normal; text-align: left; font-family: 'Open Sans', Arial, Helvetica, sans-serif; word-break: break-word;">
+                                          <span style="color: rgb(51, 51, 51); font-weight: 600; font-size: inherit; line-height: 24px;">Contactanos
+                                          </span>
+                                        </td>
+                                    </tr>
+                                    <!-- start space -->
+                                    <tr>
+                                      <td valign="top" height="20" >
+                                      </td>
+                                    </tr>
+                                    <!-- end space -->
+                                  </table>
+                                </td>
+                              </tr>
+                              <!-- end title -->
+
+                              <!-- start content -->
+                              <tr dup="0">
+                                <td valign="top">
+                                  <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                      <td align="left" style="font-size: 14px; line-height: 24px; color: rgb(136, 136, 136); font-weight: normal; text-align: left; font-family: 'Open Sans', Arial, Helvetica, sans-serif; word-break: break-word;">
+                                          <span style="text-decoration: none; color: rgb(136, 136, 136); font-size: inherit; line-height: 24px;">
+                                            <%=address%><br style="line-height: 24px;">
+                                            <%=address_1%><br style="line-height: 24px;">
+                                            <span style="text-decoration: none; color: rgb(136, 136, 136); font-size: inherit; line-height: 24px;">Mail&nbsp;&nbsp;:&nbsp;&nbsp;<a href="mailito:<%=response_email%>" style="color: rgb(255, 144, 14); font-size: 14px; line-height: 24px; text-decoration: none;"><%=response_email%></a></span><br style="line-height: 24px;">
+                                            <span style="text-decoration: none; color: rgb(136, 136, 136); font-size: inherit; line-height: 24px;">Telefono:&nbsp;&nbsp;:&nbsp;&nbsp;<a href="https://api.whatsapp.com/send?phone=<%=phone%>" style="color: rgb(255, 144, 14); font-size: 14px; line-height: 24px; text-decoration: none;"><%=phone%></a></span>
+                                          </span>
+                                        </td>
+                                    </tr>
+                                    <!-- start space -->
+                                    <tr>
+                                      <td valign="top" height="20" >
+                                      </td>
+                                    </tr>
+                                    <!-- end space -->
+                                  </table>
+                                </td>
+                              </tr>
+                              <!-- end content -->
+                              </table><!--[if (gte mso 9)|(IE)]></td><td valign="top"><![endif]--><table width="30" border="0" cellpadding="0" cellspacing="0" align="left" class="space-w-25" style="min-width:30px; height:1px; mso-table-lspace:0pt; mso-table-rspace:0pt; border-spacing:0;" dir="ltr">
+                                <tr>
+                                  <td height="1" width="30" class="h-30" style="display: block; font-size: 0px; line-height: 0; border-collapse: collapse;">
+                                  </td>
+                                </tr>
+                              </table><!--[if (gte mso 9)|(IE)]></td><td valign="top"><![endif]--><table width="265" align="right" border="0" cellpadding="0" cellspacing="0" class="col-2" dir="ltr">
+                                <!-- start title -->
+                              <tr dup="0">
+                                <td valign="top" align="left">
+                                  <table width="100%" align="left" border="0" cellspacing="0" cellpadding="0" style="margin:0 auto;">
+                                    <tr>
+                                      <td align="left" style="font-size: 18px; line-height: 24px; color: rgb(51, 51, 51); font-weight: normal; text-align: left; font-family: 'Open Sans', Arial, Helvetica, sans-serif; word-break: break-word;">
+                                          <span style="color: rgb(51, 51, 51); font-weight: 600; font-size: inherit; line-height: 24px;">ACERCA DE NOSOTROS
+                                          </span>
+                                        </td>
+                                    </tr>
+                                    <!-- start space -->
+                                    <tr>
+                                      <td valign="top" height="20" >
+                                      </td>
+                                    </tr>
+                                    <!-- end space -->
+                                  </table>
+                                </td>
+                              </tr>
+                              <!-- end title -->
+
+                              <!-- start content -->
+                              <tr dup="0">
+                                <td valign="top">
+                                  <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                      <td align="left" style="font-size: 14px; line-height: 24px; color: rgb(136, 136, 136); font-weight: normal; text-align: left; font-family: 'Open Sans', Arial, Helvetica, sans-serif; word-break: break-word;">
+                                          <span style="text-decoration: none; color: rgb(136, 136, 136); font-size: inherit; line-height: 24px;">
+                                            <%=about%>
+                                          </span>
+                                        </td>
+                                    </tr>
+                                    <!-- start space -->
+                                    <tr>
+                                      <td valign="top" height="20" >
+                                      </td>
+                                    </tr>
+                                    <!-- end space -->
+                                  </table>
+                                </td>
+                              </tr>
+                              <!-- end content -->
+                              </table></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <!-- start space -->
+                    <tr>
+                      <td valign="top" height="30" >
+                      </td>
+                    </tr>
+                    <!-- end space -->
+                    
+                  </table>
+                </td>
+              </tr>
+            </table>
+            <!-- end container -->
+          </td>
+        </tr>
+        <!-- END LAYOUT-18 ( CONTACT US / ABOUT US ) -->
+      
+        <!--START LAYOUT-19 ( LOGO / ICON-SOCIAL )-->
+        <tr>
+          <td align="center" valign="top" class="container" style="background-color: #ffffff; border-bottom:1px solid #e8e8e8;">
+            <!-- start container -->
+            <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" class="container" style="min-width:600px; margin:0 auto; background-color: #ffffff; padding-left:20px; padding-right:20px; ">
+              <tr>
+                <td valign="top">
+                  <table width="560" border="0" cellspacing="0" cellpadding="0" align="center" class="full-width" style="margin:0 auto;">
+                    <!-- start space -->
+                    <tr>
+                      <td valign="top" height="30" >
+                      </td>
+                    </tr>
+                    <!-- end space -->
+                    <tr>
+                      <td valign="top">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                          <tr>
+                            <td valign="middle"><table width="auto" align="left" border="0" cellspacing="0" cellpadding="0" class="full-width-center" dir="ltr">
+                                <tr>
+                                  <td align="center" valign="top">
+                                    <a href="<%= logo_url %>" style="font-size: inherit; text-decoration: none;">
+                                      <img src="website.com/images/<%= logo %>" width="136" style="max-width:240px; display: block !important; " alt="logo-top" border="0" hspace="0" vspace="0">
+                                    </a>
+                                  </td>
+                                </tr>
+                              </table><!--[if (gte mso 9)|(IE)]></td><td valign="top"><![endif]--><table width="20" border="0" cellpadding="0" cellspacing="0" align="left" class="full-width" style="height:1px; mso-table-lspace:0pt; mso-table-rspace:0pt; border-spacing:0;" dir="ltr">
+                                <tr>
+                                  <td height="1" class="h-20" >
+                                  </td>
+                                </tr>
+                              </table><!--[if (gte mso 9)|(IE)]></td><td valign="top"><![endif]--><table width="auto" align="right" border="0" cellpadding="0" cellspacing="0" class="full-width-center" dir="ltr">
+                                <tr>
+                                  <td valign="middle">
+                                    <table width="auto" align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+                                      <tr>
+                                         <% if (social.facebook.active) { %>
+                                        <td align="center" valign="middle" style="padding-left:3px; padding-right:3px;">
+                                          <a href="<%=social.facebook.url%>" style="font-size: inherit; text-decoration: none;">
+                                            <img src="website.com/images/set1-social-facebook-gray.png" width="25" alt="facebook" style="max-width: 25px; display: block !important;">
+                                          </a>
+                                        </td>
+                                        <% } %>
+                                        <% if (social.twitter.active) { %>
+                                        <td align="center" valign="middle" style="padding-left:3px; padding-right:3px;">
+                                          <a href="<%=social.twitter.url%>" style="font-size: inherit; text-decoration: none;">
+                                            <img src="website.com/images/set1-social-twitter-gray.png" width="25" alt="twitter" style="max-width: 25px; display: block !important;">
+                                          </a>
+                                        </td>
+                                        <% } %>
+                                        <% if (social.googleplus.active) { %>
+                                        <td align="center" valign="middle" style="padding-left:3px; padding-right:3px;">
+                                          <a href="<%=social.googleplus.url%>" style="font-size: inherit; text-decoration: none;">
+                                            <img src="website.com/images/set1-social-googleplus-gray.png" width="25" alt="googleplus" style="max-width: 25px; display: block !important;">
+                                          </a>
+                                        </td>
+                                        <% } %>
+                                        <% if (social.rss.active) { %>
+                                        <td align="center" valign="middle" style="padding-left:3px; padding-right:3px;">
+                                          <a href="<%=social.rss.url%>" style="font-size: inherit; text-decoration: none;">
+                                            <img src="website.com/images/set1-social-rss-gray.png" width="25" alt="rss" style="max-width: 25px; display: block !important;">
+                                          </a>
+                                        </td>
+                                        <% } %>
+                                        <% if (social.youtube.active) { %>
+                                        <td align="center" valign="middle" style="padding-left:3px; padding-right:3px;">
+                                          <a href="<%=social.youtube.url%>" style="font-size: inherit; text-decoration: none;">
+                                            <img src="website.com/images/set1-social-youtube-gray.png" width="25" alt="youtube" style="max-width: 25px; display: block !important;">
+                                          </a>
+                                        </td>
+                                        <% } %>
+                                        <% if (social.vimeo.active) { %>
+                                        <td align="center" valign="middle" style="padding-left:3px; padding-right:3px;">
+                                          <a href="<%=social.vimeo.url%>" style="font-size: inherit; text-decoration: none;">
+                                            <img src="website.com/images/set1-social-vimeo-gray.png" width="25" alt="vimeo" style="max-width: 25px; display: block !important;">
+                                          </a>
+                                        </td>
+                                        <% } %>
+                                        <% if (social.pinterest.active) { %>
+                                        <td align="center" valign="middle" style="padding-left:3px; padding-right:3px;">
+                                          <a href="<%=social.pinterest.url%>" style="font-size: inherit; text-decoration: none;">
+                                            <img src="website.com/images/set1-social-pinterest-gray.png" width="25" alt="pinterest" style="max-width: 25px; display: block !important;">
+                                          </a>
+                                        </td>
+                                        <% } %>
+                                        <% if (social.linkedin.active) { %>
+                                        <td align="center" valign="middle" style="padding-left:3px; padding-right:3px;">
+                                          <a href="<%=social.linkedin.url%>" style="font-size: inherit; text-decoration: none;">
+                                            <img src="website.com/images/set1-social-linkedin-gray.png" width="25" alt="linkedin" style="max-width: 25px; display: block !important;">
+                                          </a>
+                                        </td>
+                                        <% } %>
+                                        <% if (social.instagram.active) { %>
+                                        <td align="center" valign="middle" style="padding-left:3px; padding-right:3px;">
+                                          <a href="<%=social.instagram.url%>" style="font-size: inherit; text-decoration: none;">
+                                            <img src="website.com/images/set1-social-instagram-gray.png" width="25" alt="instagram" style="max-width: 25px; display: block !important;">
+                                          </a>
+                                        </td>
+                                        <% } %>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <!-- start space -->
+                    <tr>
+                      <td valign="top" height="30" >
+                      </td>
+                    </tr>
+                    <!-- end space -->
+                  </table>
+                </td>
+              </tr>
+            </table>
+            <!-- end container -->
+          </td>
+        </tr>
+        <!--END LAYOUT-19 ( LOGO / ICON-SOCIAL )-->
+      
+       <!-- START LAYOUT-20 ( UNSUBSCRIBE )-->
+        <tr>
+          <td valign="top" align="center" style="background-color:#ff900e; border-bottom:1px solid #e8e8e8;" class="container">
+            <!-- start container -->
+            <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" style="background-color:#ff900e; min-width:600px; margin:0 auto; padding-left:20px; padding-right:20px;" class="container">
+              <tr>
+                <td valign="top" align="center">
+                  <table width="560" border="0" cellspacing="0" cellpadding="0" align="center" class="full-width" style="margin:0 auto;">
+                    <!-- start space -->
+                    <tr>
+                      <td valign="top" height="20" >
+                      </td>
+                    </tr>
+                    <!-- end space -->
+                    <tr>
+                      <td valign="top" align="center">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                          <tr>
+                            <td valign="middle" align="center"><table width="auto" align="left" border="0" cellspacing="0" cellpadding="0" class="full-width-center" dir="ltr">
+                                <tr>
+                                  <td align="center" style="font-size: 14px; line-height: 24px; color: rgb(255, 255, 255); font-weight: normal; text-align: center; font-family: 'Open Sans', Arial, Helvetica, sans-serif; word-break: break-word;">
+                                    <span style="text-decoration: none; color: rgb(255, 255, 255); font-size: inherit; line-height: 24px;">
+                                      <a href="#" style="color: rgb(255, 255, 255); font-size: inherit; line-height: 24px; text-decoration: none;">
+                                            <%=rights%></a>
+                                    </span>
+                                  </td>
+                                </tr>
+                              </table><!--[if (gte mso 9)|(IE)]></td><td valign="top"><![endif]--><table width="20" border="0" cellpadding="0" cellspacing="0" align="left" class="full-width" style="height:1px; mso-table-lspace:0pt; mso-table-rspace:0pt; border-spacing:0;" dir="ltr">
+                                <tr>
+                                  <td height="1" class="h-20" >
+                                  </td>
+                                </tr>
+                              </table><!--[if (gte mso 9)|(IE)]></td><td valign="top"><![endif]--><table width="auto" align="right" border="0" cellspacing="0" cellpadding="0" class="full-width-center" dir="ltr">
+                                <tr>
+                                  <td align="center" style="font-size: 14px; line-height: 24px; color: rgb(255, 255, 255); font-weight: normal; text-align: center; font-family: 'Open Sans', Arial, Helvetica, sans-serif; word-break: break-word;">
+                                    <span style="font-weight: bold; text-decoration: none; color: rgb(255, 255, 255); font-size: inherit; line-height: 24px;">
+                                      <a href=" <%=unsubscribe_uri%>" style="color: rgb(255, 255, 255); font-size: inherit; line-height: 24px; text-decoration: none;">Darse de baja</a>
+                                    </span>
+                                  </td>
+                                </tr>
+                              </table></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <!-- start space -->
+                    <tr>
+                      <td valign="top" height="20" >
+                      </td>
+                    </tr>
+                    <!-- end space -->
+                  </table>
+                </td>
+              </tr>
+              
+            </table>
+            <!-- end container -->
+          </td>
+        </tr>
+        <!-- END LAYOUT-20 ( UNSUBSCRIBE )-->
+      </table></body>
+</html>

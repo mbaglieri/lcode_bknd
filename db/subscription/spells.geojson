@@ -1,0 +1,14 @@
+[
+   {
+      "subscription":"test_one_time",
+      "key":"test_one_time",
+      "description":"limit api requests for free users",
+      "exec":"API",
+      "status":"ACTIVE",
+      "config":{
+         "read":100,
+         "write":10,
+         "daily":true
+      }
+   }
+]

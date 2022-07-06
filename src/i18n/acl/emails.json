@@ -1,0 +1,26 @@
+{
+  "send_new_code": {
+    "es":{
+      "subject"  : "Nuevo codigo: #code",
+      "title"  : "Nuevo codigo: #code",
+      "subtitle": "#name aqui tienes tu nuevo codigo: #code"
+    },
+    "en":{
+      "subject"  : "New Code: #code",
+      "title"  : "New Code: #code",
+      "subtitle": "#name here you have your new code: #code"
+    }
+  },
+  "welcome_name": {
+    "es":{
+      "subject"  : "Bienvendido a LowCodeSaaS: #name",
+      "title"  : "Nuevo codigo: #code",
+      "subtitle": "#name aqui tienes tu nuevo codigo: #code"
+    },
+    "en":{
+      "subject"  : "Welcome to LowCodeSaaS: #name",
+      "title"  : "New Code: #code",
+      "subtitle": "#name here you have your new code: #code"
+    }
+  }
+}

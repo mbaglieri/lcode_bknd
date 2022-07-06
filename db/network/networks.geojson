@@ -1,0 +1,20 @@
+[
+    {
+        "key": "low_code_production",
+        "status": "ACTIVE",
+        "country":"Argentina",
+        "location":[0,0],
+        "creator":"matias@doors.digital",
+        "categories":["production"],
+        "cfg":{"color":"cccccc","url":"subdomain.website","lang_avaiable":"es|en","pass":"","translation":{"en":"SaaS Production","es":"Saas Production"},"type":"public","type_c":"public","message":{"en":"Saas Production Network","es":"SaaS production network"},"icon":"https://your-website-image-icon","image":"https://your-website-image"}
+    },
+    {
+        "key": "low_code_stage",
+        "status": "ACTIVE",
+        "country":"Argentina",
+        "location":[0,0],
+        "creator":"matias@doors.digital",
+        "categories":["stage"],
+        "cfg":{"color":"cccccc","url":"subdomain.website","lang_avaiable":"es|en","pass":"","translation":{"en":"SaaS Stage","es":"Saas Stage"},"type":"public","type_c":"public","message":{"en":"Saas Stage Network","es":"SaaS Stage network"},"icon":"https://your-website-image-icon","image":"https://your-website-image"}
+    }
+]

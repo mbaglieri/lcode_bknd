@@ -1,0 +1,281 @@
+{
+  "env"          : "development",
+  "worker_id"    : 1,
+  "send_mail"    : true,
+  "verification" : {
+    "unique":true,
+    "clean_history":1,
+    "token_on_create":false,
+    "force_close_sessions":false,
+    "registration":{
+      "type":"PHONE",
+      "block_limit":10,
+      "timer":3000,
+      "ip_limit":3,
+      "translation":"welcome_name",
+      "template":"welcome"
+    },
+    "login":{
+      "type":"PHONE",
+      "warning":3,
+      "block":10,
+      "timer":3000,
+      "translation":"send_new_code",
+      "template":"send_code"
+    },
+    "forgot":{
+      "type":"PHONE",
+      "block_limit":3,
+      "timer":3000,
+      "translation":"send_new_code",
+      "template":"send_code"
+    },
+    "verify":{
+      "type":"PHONE",
+      "block_limit":3,
+      "timer":3000,
+      "translation":"send_new_code",
+      "template":"send_code"
+    },
+    "change_phone":{
+      "type":"PHONE",
+      "block_limit":3,
+      "timer":3000,
+      "translation":"send_new_code",
+      "template":"send_code"
+    },
+    "change_email":{
+      "type":"EMAIL",
+      "block_limit":3,
+      "timer":3000,
+      "translation":"send_new_code",
+      "template":"send_code"
+    }
+  },
+  "mail_templates":{
+    "address":"Company Name 1234 Street",
+    "address_1":"Stage Post 1234",
+    "response_email":"info@youemail.com",
+    "phone":"001-1234-5678",
+    "about":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas error dolores quia inventore, praesentium sint!",
+    "rights":"© 2022 Matias Baglieri All rights reserved",
+    "logo":"set1-logo-top.png",
+    "logo_url":"https://",
+    "social":{
+      "facebook":{
+        "active":true,
+        "url":"https://www.facebook.com/carlosmatiasbaglieri"
+      },
+      "twitter":{
+        "active":true,
+        "url":"https://twitter.com/mts_344"
+      },
+      "instagram":{
+        "active":true,
+        "url":"https://www.instagram.com/matiasbaglieri/"
+      },
+      "linkedin":{
+        "active":true,
+        "url":"https://www.linkedin.com/in/rebelus/"
+      },
+      "vimeo":{
+        "active":false,
+        "url":"https://"
+      },
+      "youtube":{
+        "active":true,
+        "url":"https://"
+      },
+      "googleplus":{
+        "active":false,
+        "url":"https://"
+      },
+      "rss":{
+        "active":false,
+        "url":"https://"
+      },
+      "pinterest":{
+        "active":false,
+        "url":"https://"
+      }
+    },
+    "unsubscribe_uri":"https://"
+  },
+  "firebase"     :{
+    "key":"AAAA4hPxIjo:APA91bFXPoM-Z0Yekki5m6c-hhIEdl26e0fK5mR2lW1bPH4P3qrwmAQCimWfFpLk07BxQKKoj7g4d3SF1uSf3z0vabVriUv89-VPM4FyR-U81FUBATXGc6Cn1pvW54hZUetsV26JBtDa",
+    "project_id":970997178938
+  },
+  "sequelize": {
+    "is_active": false,
+    "username" : "root",
+    "password" : "toor",
+    "database" : "test_server",
+    "options":{
+      "logging": false,
+      "host": "127.0.0.1",
+      "dialect": "mysql",
+      "port": 3306,
+      "pool": {
+        "max": 5,
+        "min": 0,
+        "idle": 10000
+      }
+    }
+  },
+  "redis": {
+      "host": "127.0.0.1",
+      "port": 6379,
+      "pass": null
+  },
+  "knex": {
+    "host"    : "127.0.0.1",
+    "dialect" : "mysql",
+    "password": "root",
+    "user"    : "toor",
+    "database": "test_server",
+    "pool":  {
+      "max": 5,
+      "min": 0,
+      "idle": 10000
+    }
+  },
+  "mongo": {
+    "host": "127.0.0.1",
+    "db"  : "test_server",
+    "task"  : "tasks",
+    "port": 27017
+  },
+  "mongo_replica": {
+    "host": "127.0.0.1",
+    "db"  : "test_server_replica",
+    "task"  : "tasks",
+    "port": 27017
+  },
+  "ssl": {
+    "port": 8443,
+    "wss":8344,
+    "is_enabled":false,
+    "key":"/opt/ssl/cert.co.key",
+    "certificate":"/opt/ssl/cert.co.crt",
+    "https_enabled":false,
+    "wss_enabled":false,
+    "privkey":"../ssl/privkey.pem",
+    "cert":"../ssl/cert.pem",
+    "ca":"../ssl/chain.pem"
+  },
+  "express": {
+    "host": "localhost",
+    "port": 8000,
+    "session_secret": "Z9ofvRRu6fShJ0aogcIWXc4tXQk",
+    "app_sync" : "pk_live_vmFzRlAbFdVLhxD1CXeDip2P",
+    "expire"        : 1440,
+    "static_root"   : "res",
+    "view_root"     : "src/views",
+    "card_root"     : "./cards",
+    "contacts_root" : "./contacts"
+  },
+  "sockets":[
+    {
+      "port": 2000,
+      "perMessageDeflate": {
+        "zlibDeflateOptions": {
+          "chunkSize": 1024,
+          "memLevel": 7,
+          "level": 3
+        },
+        "zlibInflateOptions": {
+          "chunkSize": 10240
+        },
+        "clientNoContextTakeover": true, 
+        "serverNoContextTakeover": true, 
+        "serverMaxWindowBits": 10, 
+        "concurrencyLimit": 10, 
+        "threshold": 1024 
+      }
+    },
+    {
+      "port": 8345,
+      "perMessageDeflate": {
+        "zlibDeflateOptions": {
+          "chunkSize": 1024,
+          "memLevel": 7,
+          "level": 3
+        },
+        "zlibInflateOptions": {
+          "chunkSize": 10240
+        },
+        "clientNoContextTakeover": true, 
+        "serverNoContextTakeover": true, 
+        "serverMaxWindowBits": 10, 
+        "concurrencyLimit": 10, 
+        "threshold": 1024 
+      }
+    }
+  ],
+  "rest": {
+    "ports": [8843]
+  },
+  "logging":{
+    "log" : true,
+    "log_i" : false,
+    "log_d" : true,
+    "log_v" : true,
+    "log_w" : true,
+    "handleExceptions" : true,
+    "exitOnError" : true,
+    "showErrorsInHttp" : true,
+    "showErrorsInConsole" : true
+  },
+  "socke1t":"",
+  "socket": {
+    "validate_login": {
+      "token"            :false,
+      "token_constructor":false,
+      "d_token"          :false
+    },
+    "time_out": {
+      "disconnect_user":600,
+      "ping_user"      :300
+    },
+    "options":{
+      "show_ip"    :true,
+      "force_close":true
+    }
+  },
+  "subscription":{
+    "SYSTEM":{
+      "accept_by_group": false,
+      "on_remove_alow_empty":true
+    },
+    "MERCHANT":{
+      "accept_by_group": true,
+      "on_remove_alow_empty":false
+    },
+    "COMMUNITY":{
+      "accept_by_group": true,
+      "on_remove_alow_empty":false
+    },
+    "ENVIRONMENT":{
+      "accept_by_group": true,
+      "on_remove_alow_empty":false
+    }
+  },
+  "topology": {
+    "environments": {
+      "user_create":true
+    }
+  },
+  "server": {
+    "development": {
+      "url":"https://andremus.doors.digital"
+    },
+    "stage": {
+      "url":"https://andremus.doors.digital"
+    },
+    "production": {
+      "url":"https://esteofalus.doors.digital"
+    }
+  },
+  "log_directory": "all.txt",
+  "log_dir":"./logs"
+}

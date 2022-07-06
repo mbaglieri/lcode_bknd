@@ -1,0 +1,1 @@
+@notes = require './notes.queries'

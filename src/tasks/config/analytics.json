@@ -1,0 +1,38 @@
+{
+  "analytics.system_check_history":{
+    "timer": "60 seconds",
+    "description": "Find if something relevant to save, users active daily, Monthly, Q,",
+    "active": 0,
+    "service":"/tools/qtasks",
+    "method" :"new_qtask",
+    "qtask_action_key":"ANALYTICS_DB",
+    "qtask_action":{"timer":10,"type_op":"analytics_db","active":true,"system":false,"on_init_only":false}
+  },
+  "analytics.system_save_history":{
+    "timer": "60 seconds",
+    "description": "Saves history for be readed later",
+    "active": 0,
+    "service":"/system/analytics/index",
+    "method" :"system_save_history",
+    "qtask_action_key":"ANALYTICS_DB",
+    "qtask_action":{"timer":10,"type_op":"analytics_db","active":true,"system":false,"on_init_only":false}
+  },
+  "analytics.ml_check":{
+    "timer": "60 seconds",
+    "description": "Find if something relevant to save, users active daily, Monthly, Q,",
+    "active": 0,
+    "service":"/tools/qtasks",
+    "method" :"new_qtask",
+    "qtask_action_key":"ANALYTICS_ML",
+    "qtask_action":{"timer":10,"type_op":"analytics_db","active":true,"system":false,"on_init_only":false}
+  },
+  "analytics.ml_exec":{
+    "timer": "60 seconds",
+    "description": "Saves history for be readed later",
+    "active": 0,
+    "service":"/system/analytics/index",
+    "method" :"ml_exec",
+    "qtask_action_key":"ANALYTICS_ML",
+    "qtask_action":{"timer":10,"type_op":"analytics_db","active":true,"system":false,"on_init_only":false}
+  }
+}

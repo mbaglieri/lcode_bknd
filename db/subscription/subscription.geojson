@@ -1,0 +1,222 @@
+[
+   {
+      "key":"test_one_time",
+      "description":"For demo users limted requests before they buy a plan.",
+      "type_operation":"ONE_TIME",
+      "currency":"USD",
+      "status":"ACTIVE",
+      "downgrade":[
+         
+      ],
+      "upgrade":[
+         "test_silver_time",
+         "silver_monthly",
+         "test_gold_time",
+         "gold_monthly"
+      ],
+      "group":"professional",
+      "type":"SYSTEM",
+      "price":0
+   },
+   {
+      "key":"test_silver_time",
+      "description":"this is a test of one time",
+      "type_operation":"RESERVATION",
+      "currency":"USD",
+      "status":"ACTIVE",
+      "downgrade":[
+         
+      ],
+      "upgrade":[
+         "silver_monthly",
+         "test_gold_time",
+         "gold_monthly"
+      ],
+      "group":"professional",
+      "type":"SYSTEM",
+      "price":0
+   },
+   {
+      "key":"silver_monthly",
+      "description":"this is a test of one time",
+      "type_operation":"MONTHLY",
+      "currency":"USD",
+      "status":"ACTIVE",
+      "type":"SYSTEM",
+      "downgrade":[
+         
+      ],
+      "upgrade":[
+         "test_gold_time",
+         "gold_monthly"
+      ],
+      "group":"professional",
+      "price":10
+   },
+   {
+      "key":"test_gold_time",
+      "description":"this is a test of one time",
+      "type_operation":"RESERVATION",
+      "currency":"USD",
+      "status":"ACTIVE",
+      "downgrade":[
+         "silver_monthly"
+      ],
+      "upgrade":[
+         "gold_monthly"
+      ],
+      "group":"professional",
+      "type":"SYSTEM",
+      "price":0
+   },
+   {
+      "key":"gold_monthly",
+      "description":"this is a test of one time",
+      "type_operation":"MONTHLY",
+      "currency":"USD",
+      "status":"ACTIVE",
+      "downgrade":[
+         "silver_monthly"
+      ],
+      "upgrade":[
+         
+      ],
+      "group":"professional",
+      "type":"SYSTEM",
+      "price":10
+   },
+   {
+      "key":"test_enterprise_time",
+      "description":"this is a test of one time",
+      "type_operation":"RESERVATION",
+      "currency":"USD",
+      "status":"ACTIVE",
+      "downgrade":[
+         
+      ],
+      "upgrade":[
+         "enteprise_monthly",
+         "test_enteprise_gold_monthly",
+         "enteprise_gold_monthly"
+      ],
+      "group":"enterprise",
+      "type":"SYSTEM",
+      "price":0
+   },
+   {
+      "key":"enteprise_monthly",
+      "description":"this is a test of one time",
+      "type_operation":"MONTHLY",
+      "currency":"USD",
+      "status":"ACTIVE",
+      "downgrade":[
+         
+      ],
+      "upgrade":[
+         "test_enteprise_gold_monthly",
+         "enteprise_gold_monthly"
+      ],
+      "group":"enterprise",
+      "type":"SYSTEM",
+      "price":10
+   },
+   {
+      "key":"test_enteprise_gold_monthly",
+      "description":"this is a test of one time",
+      "type_operation":"RESERVATION",
+      "currency":"USD",
+      "status":"ACTIVE",
+      "downgrade":[
+         "enteprise_monthly"
+      ],
+      "upgrade":[
+         "enteprise_gold_monthly"
+      ],
+      "group":"enterprise",
+      "type":"SYSTEM",
+      "price":0
+   },
+   {
+      "key":"enteprise_gold_monthly",
+      "description":"this is a test of one time",
+      "type_operation":"MONTHLY",
+      "currency":"USD",
+      "status":"ACTIVE",
+      "downgrade":[
+         "enteprise_monthly"
+      ],
+      "upgrade":[
+         
+      ],
+      "group":"enterprise",
+      "type":"SYSTEM",
+      "price":10
+   },
+   {
+      "key":"test_silver_credits",
+      "description":"this is a test of one time",
+      "type_operation":"RESERVATION",
+      "currency":"USD",
+      "status":"ACTIVE",
+      "type":"SYSTEM",
+      "downgrade":[
+         
+      ],
+      "upgrade":[
+         "silver_credits",
+         "test_gold_credits",
+         "gold_credits"
+      ],
+      "group":"credits",
+      "price":0
+   },
+   {
+      "key":"silver_credits",
+      "description":"this is a test of one time",
+      "type_operation":"CREDITS",
+      "currency":"USD",
+      "status":"ACTIVE",
+      "downgrade":[
+         
+      ],
+      "upgrade":[
+         "test_gold_credits",
+         "gold_credits"
+      ],
+      "group":"credits",
+      "type":"SYSTEM",
+      "price":10
+   },
+   {
+      "key":"test_gold_credits",
+      "description":"this is a test of one time",
+      "type_operation":"RESERVATION",
+      "currency":"USD",
+      "status":"ACTIVE",
+      "downgrade":[
+         "silver_credits"
+      ],
+      "upgrade":[
+         "gold_credits"
+      ],
+      "group":"credits",
+      "type":"SYSTEM",
+      "price":0
+   },
+   {
+      "key":"gold_credits",
+      "description":"this is a test of one time",
+      "type_operation":"CREDITS",
+      "currency":"USD",
+      "status":"ACTIVE",
+      "downgrade":[
+         "silver_credits"
+      ],
+      "upgrade":[
+         
+      ],
+      "group":"credits",
+      "type":"SYSTEM",
+      "price":10
+   }
+]

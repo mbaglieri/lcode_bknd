@@ -1,0 +1,7 @@
+@qtask                   = require './system_qtask'
+@qtask_action            = require './system_qtask_action'
+@qtask_history           = require './system_qtask_history'
+@qtask_user              = require './system_qtask_user'
+@qtask_user_history      = require './system_qtask_user_history'
+@qtask_user_exec         = require './system_qtask_user_exec'
+@qtask_user_exec_history = require './system_qtask_user_exec_history'

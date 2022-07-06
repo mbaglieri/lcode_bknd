@@ -1,0 +1,93 @@
+{
+ 
+  "setup.setup_db_job":{
+    "timer": "30 seconds",
+    "description": "this process verify the integrity of the database, if its compromised execute be called ",
+    "active": 1,
+    "service":"/tools/qtasks",
+    "method" :"new_qtask",
+    "qtask_action_key":"SETUPDB",
+    "qtask_action":{"timer":1,"type_op":"setup_db","active":true,"system":true,"on_init_only":true}
+  },
+  "setup.execute_db_job":{
+    "timer": "30 seconds",
+    "description": "after check the integrity of the db drops and create the data to be operative (Countries, Topology, System Users,Roles, RequestMaps)",
+    "active": 1,
+    "service":"/system/setup/index",
+    "method" :"execute_db_job",
+    "qtask_action_key":"SETUPDB",
+    "qtask_action":{"timer":1,"type_op":"setup_db","active":true,"system":true,"on_init_only":true}
+  },
+  "depuration.new_finder":{
+    "timer": "30 seconds",
+    "description": "resolve the no-responding nodes and balance the qtasks to the availables",
+    "active": 1,
+    "service":"/tools/qtasks",
+    "method" :"new_qtask",
+    "qtask_action_key":"DEPURATION_QTASK",
+    "qtask_action":{"timer":1,"type_op":"depuration","active":true,"system":true,"on_init_only":false}
+  },
+  "depuration.execute":{
+    "timer": "30 seconds",
+    "description": "resolve the no-responding nodes and balance the qtasks to the availables",
+    "active": 1,
+    "service":"/system/depuration/index",
+    "method" :"execute_job",
+    "qtask_action_key":"DEPURATION_QTASK",
+    "qtask_action":{"timer":1,"type_op":"depuration","active":true,"system":true,"on_init_only":false}
+  },
+  "depuration.users_server_job_init":{
+    "timer": "30 seconds",
+    "description": "resolve the no-responding nodes and balance the qtasks to the availables",
+    "active": 1,
+    "service":"/tools/qtasks",
+    "method" :"new_qtask",
+    "qtask_action_key":"DEPURATION_QTASK_USER",
+    "qtask_action":{"timer":1,"type_op":"depuration_user","active":true,"system":true,"on_init_only":false}
+  },
+  "depuration.users_server_job_execute":{
+    "timer": "120 seconds",
+    "description": "resolve the no-responding nodes and balance the qtasks to the availables",
+    "active": 1,
+    "service":"/system/depuration/index",
+    "method" :"users_server_job_execute",
+    "qtask_action_key":"DEPURATION_QTASK_USER",
+    "qtask_action":{"timer":1,"type_op":"depuration_user","active":true,"system":false,"on_init_only":false}
+  },
+  "depuration.depurate_user_history":{
+    "timer": "30 seconds",
+    "description": "removing items from tempral tables",
+    "active": 1,
+    "service":"/tools/qtasks",
+    "method" :"new_qtask",
+    "qtask_action_key":"DEPURATION_USER_HISTORY",
+    "qtask_action":{"timer":1,"type_op":"depurate_user_history_execute","active":true,"system":false,"on_init_only":false}
+  },
+  "depuration.depurate_user_history_execute":{
+    "timer": "30 seconds",
+    "description": "removing items from tempral tables",
+    "active": 1,
+    "service":"/system/depuration/index",
+    "method" :"depurate_user_history_execute",
+    "qtask_action_key":"DEPURATION_USER_HISTORY",
+    "qtask_action":{"timer":1,"type_op":"depurate_user_history_execute","active":true,"system":false,"on_init_only":false}
+  },
+  "history.new_finder":{
+    "timer": "30 seconds",
+    "description": "Send to history the completed works",
+    "active": 1,
+    "service":"/tools/qtasks",
+    "method" :"new_qtask",
+    "qtask_action_key":"HISTORY_QTASK",
+    "qtask_action":{"timer":1,"type_op":"history","active":true,"system":true,"on_init_only":false}
+  },
+  "history.execute":{
+    "timer": "30 seconds",
+    "description": "Send to history the completed works",
+    "active": 1,
+    "service":"/system/history/index",
+    "method" :"execute_job",
+    "qtask_action_key":"HISTORY_QTASK",
+    "qtask_action":{"timer":1,"type_op":"history","active":true,"system":true,"on_init_only":false}
+  }
+}

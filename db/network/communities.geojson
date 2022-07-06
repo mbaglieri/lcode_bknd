@@ -1,0 +1,16 @@
+[
+    {
+        "key": "low_code_production_hall",
+        "network_key": "low_code_production",
+        "status": "ACTIVE",
+        "location":[0,0],
+        "cfg":{"color":"cccccc","url":"website.com","lang_avaiable":"es|en","pass":"","translation":{"en":"Entrance Hall","es":"Salon de entrada"},"type":"public","type_c":"public","message":{"en":" ","es":" "},"icon":"https://your-website-image-icon","image":"https://your-website-image"}
+    },
+    {
+        "key": "low_code_stage_hall",
+        "network_key": "low_code_stage",
+        "status": "ACTIVE",
+        "location":[0,0],
+        "cfg":{"color":"cccccc","url":"website.com","lang_avaiable":"es|en","pass":"","translation":{"en":"Entrance Hall","es":"Salon de entrada"},"type":"public","type_c":"public","message":{"en":" ","es":" "},"icon":"https://your-website-image-icon","image":"https://your-website-image"}
+    }
+]

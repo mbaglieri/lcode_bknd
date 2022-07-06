@@ -1,0 +1,7 @@
+{
+  "enable_jobs":true,
+  "servers_offline":3,
+  "days_before_user_removed":10,
+  "dir":"./src/tasks",
+  "files":["config/system.json","config/users.json","config/analytics.json","config/subscription.json"]
+}

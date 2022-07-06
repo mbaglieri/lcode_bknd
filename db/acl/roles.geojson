@@ -1,0 +1,26 @@
+[
+    {
+        "authority": "GUEST"
+    },
+    {
+        "authority": "USER"
+    },
+    {
+        "authority": "ADMIN"
+    },
+    {
+        "authority": "SYS"
+    },
+    {
+        "authority": "DBA"
+    },
+    {
+        "authority": "BUSINESS_OWNER"
+    },
+    {
+        "authority": "BUSINESS_ADMINISTRATOR"
+    },
+    {
+        "authority": "BUSINESS_MONITOR"
+    }
+]

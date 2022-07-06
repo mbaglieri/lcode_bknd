@@ -1,0 +1,21 @@
+{
+    "admin": [{
+    "email" : "m@website.com",
+    "first_name" : "matias",
+    "last_name" : "baglieri",
+    "phone" : "+5491164616122",
+    "validation_required" : true
+  },{
+    "email" : "m1@website.com",
+    "first_name" : "matias",
+    "last_name" : "baglieri",
+    "phone" : "+5491164616124",
+    "validation_required" : true
+  },{
+    "email" : "m2@website.com",
+    "first_name" : "matias",
+    "last_name" : "baglieri",
+    "phone" : "+5491164616123",
+    "validation_required" : true
+  }]
+}

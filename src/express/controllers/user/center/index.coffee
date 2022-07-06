@@ -1,0 +1,5 @@
+@notifications = require './notifications'
+@analytics     = require './analytics'
+@relationship  = require './relationship'
+@places        = require './places'
+@users         = require './users'

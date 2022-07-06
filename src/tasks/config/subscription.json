@@ -1,0 +1,110 @@
+{
+  "subscription.batch_one_time":{
+    "timer": "60 seconds",
+    "description": "Create a Job for execute spells for one time plans",
+    "active": 1,
+    "service":"/tools/qtasks",
+    "method" :"new_qtask",
+    "qtask_action_key":"SUBSCRIPTION_ONE_TIME",
+    "qtask_action":{"timer":1,"type_op":"subscription_one_time","active":true,"system":false,"on_init_only":false}
+  },
+  "subscription.batch_one_time_exec":{
+    "timer": "60 seconds",
+    "description": "execute spells for one time plans",
+    "active": 1,
+    "service":"/user/subscription/index",
+    "method" :"batch_one_time_exec",
+    "qtask_action_key":"SUBSCRIPTION_ONE_TIME",
+    "qtask_action":{"timer":1,"type_op":"subscription_one_time","active":true,"system":false,"on_init_only":false}
+  },
+  "subscription.batch_reservation":{
+    "timer": "60 seconds",
+    "description": "Create a Job for execute spells for reservation plans",
+    "active": 0,
+    "service":"/tools/qtasks",
+    "method" :"new_qtask",
+    "qtask_action_key":"SUBSCRIPTION_RESERVATION",
+    "qtask_action":{"timer":10,"type_op":"subscription_reservation","active":true,"system":false,"on_init_only":false}
+  },
+  "subscription.batch_reservation_exec":{
+    "timer": "60 seconds",
+    "description": "execute spells for reservation plans",
+    "active": 0,
+    "service":"/user/subscription/index",
+    "method" :"batch_reservation_exec",
+    "qtask_action_key":"SUBSCRIPTION_RESERVATION",
+    "qtask_action":{"timer":10,"type_op":"subscription_reservation","active":true,"system":false,"on_init_only":false}
+  },
+  "subscription.batch_monthly":{
+    "timer": "60 seconds",
+    "description": "Create a Job for execute spells for monthly plans",
+    "active": 0,
+    "service":"/tools/qtasks",
+    "method" :"new_qtask",
+    "qtask_action_key":"SUBSCRIPTION_MONTHLY",
+    "qtask_action":{"timer":10,"type_op":"subscription_monthly","active":true,"system":false,"on_init_only":false}
+  },
+  "subscription.batch_monthly_exec":{
+    "timer": "60 seconds",
+    "description": "execute spells for monthly plans",
+    "active": 0,
+    "service":"/user/subscription/index",
+    "method" :"batch_monthly_exec",
+    "qtask_action_key":"SUBSCRIPTION_MONTHLY",
+    "qtask_action":{"timer":10,"type_op":"subscription_monthly","active":true,"system":false,"on_init_only":false}
+  },
+  "subscription.batch_yearly":{
+    "timer": "60 seconds",
+    "description": "Create a Job for execute spells for yearly plans",
+    "active": 0,
+    "service":"/tools/qtasks",
+    "method" :"new_qtask",
+    "qtask_action_key":"SUBSCRIPTION_YEARLY",
+    "qtask_action":{"timer":10,"type_op":"subscription_yearly","active":true,"system":false,"on_init_only":false}
+  },
+  "subscription.batch_yearly_exec":{
+    "timer": "60 seconds",
+    "description": "execute spells for yearly plans",
+    "active": 0,
+    "service":"/user/subscription/index",
+    "method" :"batch_yearly_exec",
+    "qtask_action_key":"SUBSCRIPTION_YEARLY",
+    "qtask_action":{"timer":10,"type_op":"subscription_yearly","active":true,"system":false,"on_init_only":false}
+  },
+  "subscription.limit_exceeded":{
+    "timer": "60 seconds",
+    "description": "Find  limit exceeded of each plan user and send notification to the user",
+    "active": 0,
+    "service":"/tools/qtasks",
+    "method" :"new_qtask",
+    "qtask_action_key":"SUBSCRIPTION_LIMITS",
+    "qtask_action":{"timer":10,"type_op":"subscription_limits","active":true,"system":false,"on_init_only":false}
+  },
+  "subscription.limit_exceeded_exec":{
+    "timer": "60 seconds",
+    "description": "execute limit exceeded pending to Process",
+    "active": 0,
+    "service":"/user/subscription/index",
+    "method" :"limit_exceeded_exec",
+    "qtask_action_key":"SUBSCRIPTION_LIMITS",
+    "qtask_action":{"timer":10,"type_op":"subscription_limits","active":true,"system":false,"on_init_only":false}
+  },
+  "subscription.offers_promotions":{
+    "timer": "60 seconds",
+    "description": "Find offers and promotions pending to send to user",
+    "active": 0,
+    "service":"/tools/qtasks",
+    "method" :"new_qtask",
+    "qtask_action_key":"SUBSCRIPTION_OFFERS",
+    "qtask_action":{"timer":10,"type_op":"subscription_offers","active":true,"system":false,"on_init_only":false}
+  },
+  "subscription.offers_promotions_exec":{
+    "timer": "60 seconds",
+    "description": "execute offers and promotions",
+    "active": 0,
+    "service":"/user/subscription/index",
+    "method" :"offers_promotions_exec",
+    "qtask_action_key":"SUBSCRIPTION_OFFERS",
+    "qtask_action":{"timer":10,"type_op":"subscription_offers","active":true,"system":false,"on_init_only":false}
+  }
+}

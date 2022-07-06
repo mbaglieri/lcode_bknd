@@ -1,0 +1,22 @@
+{
+
+  "user.job_new_depuration": {
+    "timer": "120 seconds",
+    "description": "Processes for users like (Aarrr strategy, ws (Pong), newsletter, push messages, email messages, plan messages *overpass the limit* -> pay to go",
+    "active": 0,
+    "service":"/tools/qtasks",
+    "method" :"new_qtask",
+    "qtask_action_key":"GENERIC24",
+    "qtask_action":{"timer":43200,"type_op":"generic24","active":true,"system":false,"on_init_only":false}
+
+  },
+  "user.job_execute_depuration":{
+    "timer": "120 seconds",
+    "description": " ",
+    "active": 0,
+    "service":"/user/index",
+    "method" :"job_execute_depuration",
+    "qtask_action_key":"GENERIC24",
+    "qtask_action":{"timer":43200,"type_op":"generic24","active":true,"system":false,"on_init_only":false}
+  }
+}

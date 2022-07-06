@@ -1,0 +1,8180 @@
+{
+	"info": {
+		"_postman_id": "386ec76e-0aad-4843-a4c8-f078d7be6ba5",
+		"name": "SaaSLowCode",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "192314"
+	},
+	"item": [
+		{
+			"name": "system",
+			"item": [
+				{
+					"name": "aws",
+					"item": [
+						{
+							"name": "contacts",
+							"item": [
+								{
+									"name": "contact_lists",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/aws/ses/contact_lists?page_size=10&next_token",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"aws",
+												"ses",
+												"contact_lists"
+											],
+											"query": [
+												{
+													"key": "page_size",
+													"value": "10"
+												},
+												{
+													"key": "next_token",
+													"value": ""
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "contact_list",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/aws/ses/contact_list?name=1231df1f112e12312iduser",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"aws",
+												"ses",
+												"contact_list"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "1231df1f112e12312iduser"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "contact_list",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "type_list",
+													"value": "merchant",
+													"type": "text"
+												},
+												{
+													"key": "name",
+													"value": "system_mkt_import_users",
+													"type": "text"
+												},
+												{
+													"key": "description",
+													"value": "system import users contact list",
+													"type": "text"
+												},
+												{
+													"key": "tag_key",
+													"value": "mkt_users_imported",
+													"type": "text"
+												},
+												{
+													"key": "tag_val",
+													"value": "marketing users imported",
+													"type": "text"
+												},
+												{
+													"key": "topic_show_name",
+													"value": "topic marketing merchant users",
+													"type": "text"
+												},
+												{
+													"key": "topic_name",
+													"value": "mkt_merchant_users",
+													"type": "text"
+												},
+												{
+													"key": "topic_desc",
+													"value": "merchant users imported in the system",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host}}/api/admin/aws/ses/contact_list",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"aws",
+												"ses",
+												"contact_list"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "contact_list",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": []
+										},
+										"url": {
+											"raw": "{{host}}/api/admin/aws/ses/contact_list?id=1231df1f112e12312iduser",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"aws",
+												"ses",
+												"contact_list"
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "1231df1f112e12312iduser"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "contacts",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/aws/ses/contacts?page_size=10&next_token&name=1231df1f112e12312iduser",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"aws",
+												"ses",
+												"contacts"
+											],
+											"query": [
+												{
+													"key": "page_size",
+													"value": "10"
+												},
+												{
+													"key": "next_token",
+													"value": ""
+												},
+												{
+													"key": "name",
+													"value": "1231df1f112e12312iduser"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "contact",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/aws/ses/contact?name=1231df1f112e12312iduser&email=matias@website.ai",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"aws",
+												"ses",
+												"contact"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "1231df1f112e12312iduser"
+												},
+												{
+													"key": "email",
+													"value": "matias@website.ai"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "contact",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "name",
+													"value": "1231df1f112e12312iduser",
+													"type": "text"
+												},
+												{
+													"key": "email",
+													"value": "matias@website.ai",
+													"type": "text"
+												},
+												{
+													"key": "attrs",
+													"value": "system_mkt_import_users",
+													"type": "text"
+												},
+												{
+													"key": "topic_name",
+													"value": "merchant_leads",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host}}/api/admin/aws/ses/contact",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"aws",
+												"ses",
+												"contact"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "contact",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": []
+										},
+										"url": {
+											"raw": "{{host}}/api/admin/aws/ses/contact?name=1231df1f112e12312iduser&email=matias@website.ai",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"aws",
+												"ses",
+												"contact"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "1231df1f112e12312iduser"
+												},
+												{
+													"key": "email",
+													"value": "matias@website.ai"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "templates_emails",
+							"item": [
+								{
+									"name": "templates",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/aws/ses/templates?page_size=10&next_token&name=1231df1f112e12312iduser",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"aws",
+												"ses",
+												"templates"
+											],
+											"query": [
+												{
+													"key": "page_size",
+													"value": "10"
+												},
+												{
+													"key": "next_token",
+													"value": ""
+												},
+												{
+													"key": "name",
+													"value": "1231df1f112e12312iduser"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "template",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/aws/ses/template?name=1231df1f112e12312iduser&email=matias@website.ai",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"aws",
+												"ses",
+												"template"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "1231df1f112e12312iduser"
+												},
+												{
+													"key": "email",
+													"value": "matias@website.ai"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "template",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "subject",
+													"value": "merchant",
+													"type": "text"
+												},
+												{
+													"key": "txt",
+													"value": "matias@website.ai",
+													"type": "text"
+												},
+												{
+													"key": "html",
+													"value": "system_mkt_import_users",
+													"type": "text"
+												},
+												{
+													"key": "name",
+													"value": "",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host}}/api/admin/aws/ses/template",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"aws",
+												"ses",
+												"template"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "template",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": []
+										},
+										"url": {
+											"raw": "{{host}}/api/admin/aws/ses/template?id=1231df1f112e12312iduser",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"aws",
+												"ses",
+												"template"
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "1231df1f112e12312iduser"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "verify_email",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "matias@website.ai",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/api/admin/aws/ses/verify",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"aws",
+										"ses",
+										"verify"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "verify_email_status",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/admin/aws/ses/verify?email=matias@website.ai",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"aws",
+										"ses",
+										"verify"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "matias@website.ai"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "tasks",
+					"item": [
+						{
+							"name": "qtask",
+							"item": [
+								{
+									"name": "get_all",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/system/qtasks?init=0&limit=10",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"system",
+												"qtasks"
+											],
+											"query": [
+												{
+													"key": "init",
+													"value": "0",
+													"description": "init "
+												},
+												{
+													"key": "limit",
+													"value": "10",
+													"description": "count of items per page"
+												}
+											]
+										},
+										"description": "Show the answer list"
+									},
+									"response": []
+								},
+								{
+									"name": "get_one",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/qtask/6251a0cbf0fd616d0ed8b608",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"qtask",
+												"6251a0cbf0fd616d0ed8b608"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "edit",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "status",
+													"value": "IN_PROGRESS",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host}}/api/admin/system/qtask/624cf478c97f4d864be1d45c",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"qtask",
+												"624cf478c97f4d864be1d45c"
+											]
+										},
+										"description": "/api/admin/hai_question/\n\nbmax_question.message  = \nbmax_question.title    = "
+									},
+									"response": []
+								},
+								{
+									"name": "disable",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/qtask/624c96aabe4b069ef64364ae",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"qtask",
+												"624c96aabe4b069ef64364ae"
+											]
+										},
+										"description": "this acction is delete to consult,NOT use in producction"
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "qtasks_history",
+							"item": [
+								{
+									"name": "get_all",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/qtasks_history?init=0&limit=10",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"qtasks_history"
+											],
+											"query": [
+												{
+													"key": "init",
+													"value": "0",
+													"description": "init "
+												},
+												{
+													"key": "limit",
+													"value": "10",
+													"description": "count of items per page"
+												}
+											]
+										},
+										"description": "Show the answer list"
+									},
+									"response": []
+								},
+								{
+									"name": "remove_from_server",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/qtasks_history",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"qtasks_history"
+											]
+										},
+										"description": "this acction is delete to consult,NOT use in producction"
+									},
+									"response": []
+								},
+								{
+									"name": "copy_from_qtask",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/qtasks_history?id_server=NODE1",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"qtasks_history"
+											],
+											"query": [
+												{
+													"key": "id_server",
+													"value": "NODE1"
+												}
+											]
+										},
+										"description": "this acction is delete to consult,NOT use in producction"
+									},
+									"response": []
+								},
+								{
+									"name": "get_one",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/qtask_history/62543a3c8d301e3fac8d6175",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"qtask_history",
+												"62543a3c8d301e3fac8d6175"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "qtask_actions",
+							"item": [
+								{
+									"name": "get_all",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/qtasks_action?page=0",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"qtasks_action"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "0",
+													"description": "init "
+												}
+											]
+										},
+										"description": "Show the answer list"
+									},
+									"response": []
+								},
+								{
+									"name": "enable_all",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "status",
+													"value": "IN_PROGRESS",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host}}/api/admin/system/qtasks_action",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"qtasks_action"
+											]
+										},
+										"description": "/api/admin/hai_question/\n\nbmax_question.message  = \nbmax_question.title    = "
+									},
+									"response": []
+								},
+								{
+									"name": "disable_all",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/qtasks_action",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"qtasks_action"
+											]
+										},
+										"description": "this acction is delete to consult,NOT use in producction"
+									},
+									"response": []
+								},
+								{
+									"name": "get_one",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/qtasks_action/6251a0cbf0fd616d0ed8b608",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"qtasks_action",
+												"6251a0cbf0fd616d0ed8b608"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "edit",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "status",
+													"value": "IN_PROGRESS",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host}}/api/admin/system/qtasks_action/624cf478c97f4d864be1d45c",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"qtasks_action",
+												"624cf478c97f4d864be1d45c"
+											]
+										},
+										"description": "/api/admin/hai_question/\n\nbmax_question.message  = \nbmax_question.title    = "
+									},
+									"response": []
+								},
+								{
+									"name": "disable",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/qtasks_action/624c96aabe4b069ef64364ae",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"qtasks_action",
+												"624c96aabe4b069ef64364ae"
+											]
+										},
+										"description": "this acction is delete to consult,NOT use in producction"
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "qtasks_user",
+							"item": [
+								{
+									"name": "get_all",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/qtasks_user?init=0&limit=10",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"qtasks_user"
+											],
+											"query": [
+												{
+													"key": "init",
+													"value": "0",
+													"description": "init "
+												},
+												{
+													"key": "limit",
+													"value": "10",
+													"description": "count of items per page"
+												}
+											]
+										},
+										"description": "Show the answer list"
+									},
+									"response": []
+								},
+								{
+									"name": "disable_from_server",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/qtasks_user",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"qtasks_user"
+											]
+										},
+										"description": "this acction is delete to consult,NOT use in producction"
+									},
+									"response": []
+								},
+								{
+									"name": "send_to_new_server",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "status",
+													"value": "IN_PROGRESS",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host}}/api/admin/system/qtasks_user",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"qtasks_user"
+											]
+										},
+										"description": "/api/admin/hai_question/\n\nbmax_question.message  = \nbmax_question.title    = "
+									},
+									"response": []
+								},
+								{
+									"name": "get_by_user",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/qtasks_users",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"qtasks_users"
+											]
+										},
+										"description": "Show the answer list"
+									},
+									"response": []
+								},
+								{
+									"name": "get_one",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/qtask_user/6251a0cbf0fd616d0ed8b608",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"qtask_user",
+												"6251a0cbf0fd616d0ed8b608"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "edit",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "status",
+													"value": "IN_PROGRESS",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host}}/api/admin/system/qtask_user/624cf478c97f4d864be1d45c",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"qtask_user",
+												"624cf478c97f4d864be1d45c"
+											]
+										},
+										"description": "/api/admin/hai_question/\n\nbmax_question.message  = \nbmax_question.title    = "
+									},
+									"response": []
+								},
+								{
+									"name": "disable",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/qtask_user/624c96aabe4b069ef64364ae",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"qtask_user",
+												"624c96aabe4b069ef64364ae"
+											]
+										},
+										"description": "this acction is delete to consult,NOT use in producction"
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "qtasks_users_history",
+							"item": [
+								{
+									"name": "get_all",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/qtasks_users_history?init=0&limit=10",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"qtasks_users_history"
+											],
+											"query": [
+												{
+													"key": "init",
+													"value": "0",
+													"description": "init "
+												},
+												{
+													"key": "limit",
+													"value": "10",
+													"description": "count of items per page"
+												}
+											]
+										},
+										"description": "Show the answer list"
+									},
+									"response": []
+								},
+								{
+									"name": "remove_from_server",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/qtasks_users_history",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"qtasks_users_history"
+											]
+										},
+										"description": "this acction is delete to consult,NOT use in producction"
+									},
+									"response": []
+								},
+								{
+									"name": "get_one",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/qtask_user_history/6251a0cbf0fd616d0ed8b608",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"qtask_user_history",
+												"6251a0cbf0fd616d0ed8b608"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "qtasks_user_exec",
+							"item": [
+								{
+									"name": "get_all",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/qtasks_user_exec?init=0&limit=10",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"qtasks_user_exec"
+											],
+											"query": [
+												{
+													"key": "init",
+													"value": "0",
+													"description": "init "
+												},
+												{
+													"key": "limit",
+													"value": "10",
+													"description": "count of items per page"
+												}
+											]
+										},
+										"description": "Show the answer list"
+									},
+									"response": []
+								},
+								{
+									"name": "disable_from_server",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/qtasks_user_exec",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"qtasks_user_exec"
+											]
+										},
+										"description": "this acction is delete to consult,NOT use in producction"
+									},
+									"response": []
+								},
+								{
+									"name": "send_to_new_server",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "status",
+													"value": "IN_PROGRESS",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host}}/api/admin/system/qtasks_user_exec",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"qtasks_user_exec"
+											]
+										},
+										"description": "/api/admin/hai_question/\n\nbmax_question.message  = \nbmax_question.title    = "
+									},
+									"response": []
+								},
+								{
+									"name": "get_by_user",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/qtasks_users_exec",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"qtasks_users_exec"
+											]
+										},
+										"description": "Show the answer list"
+									},
+									"response": []
+								},
+								{
+									"name": "get_one",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/qtask_user_exec/6251a0cbf0fd616d0ed8b608",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"qtask_user_exec",
+												"6251a0cbf0fd616d0ed8b608"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "edit",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "status",
+													"value": "IN_PROGRESS",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host}}/api/admin/system/qtask_user_exec/624cf478c97f4d864be1d45c",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"qtask_user_exec",
+												"624cf478c97f4d864be1d45c"
+											]
+										},
+										"description": "/api/admin/hai_question/\n\nbmax_question.message  = \nbmax_question.title    = "
+									},
+									"response": []
+								},
+								{
+									"name": "disable",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/qtask_user_exec/624c96aabe4b069ef64364ae",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"qtask_user_exec",
+												"624c96aabe4b069ef64364ae"
+											]
+										},
+										"description": "this acction is delete to consult,NOT use in producction"
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "qtask_user_exec_history",
+							"item": [
+								{
+									"name": "get_all",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/qtasks_users_history?init=0&limit=10",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"qtasks_users_history"
+											],
+											"query": [
+												{
+													"key": "init",
+													"value": "0",
+													"description": "init "
+												},
+												{
+													"key": "limit",
+													"value": "10",
+													"description": "count of items per page"
+												}
+											]
+										},
+										"description": "Show the answer list"
+									},
+									"response": []
+								},
+								{
+									"name": "remove_from_server",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/qtasks_users_history",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"qtasks_users_history"
+											]
+										},
+										"description": "this acction is delete to consult,NOT use in producction"
+									},
+									"response": []
+								},
+								{
+									"name": "get_one",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/qtask_user_exec_history/6251a0cbf0fd616d0ed8b608",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"qtask_user_exec_history",
+												"6251a0cbf0fd616d0ed8b608"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "analytics",
+					"item": [
+						{
+							"name": "balancer",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/static/msg_balancer",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"static",
+										"msg_balancer"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "firebase",
+					"item": [
+						{
+							"name": "firebase_test",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "type_push",
+											"value": "iOS",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/static/firebase_test",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"static",
+										"firebase_test"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "test_push",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"message_title\": \"EveryThink\",\n\t\"message\": \"Firebase Cloud Message\"\n}"
+								},
+								"url": {
+									"raw": "{{host}}/api/me/push_test",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"push_test"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "marketing",
+					"item": []
+				},
+				{
+					"name": "emails_sms",
+					"item": []
+				},
+				{
+					"name": "leads",
+					"item": []
+				},
+				{
+					"name": "integrations",
+					"item": [
+						{
+							"name": "airtable",
+							"item": []
+						},
+						{
+							"name": "spreedsheet",
+							"item": []
+						}
+					]
+				},
+				{
+					"name": "algorithms",
+					"item": []
+				},
+				{
+					"name": "acl",
+					"item": [
+						{
+							"name": "roles",
+							"item": [
+								{
+									"name": "get_all",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/roles?page=0&authority=AD",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"roles"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "0"
+												},
+												{
+													"key": "authority",
+													"value": "AD"
+												}
+											]
+										},
+										"description": "Show the answer list"
+									},
+									"response": []
+								},
+								{
+									"name": "post",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "authority",
+													"value": "IN_PROGRESS",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host}}/api/admin/system/roles",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"roles"
+											]
+										},
+										"description": "/api/admin/hai_question/\n\nbmax_question.message  = \nbmax_question.title    = "
+									},
+									"response": []
+								},
+								{
+									"name": "pair_requestmap",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "id_role",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "id_requestmap",
+													"value": "15",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host}}/api/admin/system/roles",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"roles"
+											]
+										},
+										"description": "/api/admin/hai_question/\n\nbmax_question.message  = \nbmax_question.title    = "
+									},
+									"response": []
+								},
+								{
+									"name": "get_one",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/role/9",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"role",
+												"9"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "edit",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "authority",
+													"value": "IN_PROGRESS",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host}}/api/admin/system/role/1",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"role",
+												"1"
+											]
+										},
+										"description": "/api/admin/hai_question/\n\nbmax_question.message  = \nbmax_question.title    = "
+									},
+									"response": []
+								},
+								{
+									"name": "delete",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/role/1",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"role",
+												"1"
+											]
+										},
+										"description": "this acction is delete to consult,NOT use in producction"
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "requestmaps",
+							"item": [
+								{
+									"name": "get_all",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/requestmaps?page=1",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"requestmaps"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "path",
+													"value": "G",
+													"disabled": true
+												}
+											]
+										},
+										"description": "Show the answer list"
+									},
+									"response": []
+								},
+								{
+									"name": "get_one",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/requestmap/14",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"requestmap",
+												"14"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "edit",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "path",
+													"value": "/system/tasks",
+													"type": "text"
+												},
+												{
+													"key": "methd",
+													"value": "GET",
+													"type": "text"
+												},
+												{
+													"key": "description",
+													"value": "SYSTEM_TASKS_GET",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host}}/api/admin/system/requestmap/4",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"requestmap",
+												"4"
+											]
+										},
+										"description": "/api/admin/hai_question/\n\nbmax_question.message  = \nbmax_question.title    = "
+									},
+									"response": []
+								},
+								{
+									"name": "post",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "path",
+													"value": "/system/tasks",
+													"type": "text"
+												},
+												{
+													"key": "methd",
+													"value": "GET",
+													"type": "text"
+												},
+												{
+													"key": "description",
+													"value": "SYSTEM_TASKS_GET",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host}}/api/admin/system/requestmap",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"requestmap"
+											]
+										},
+										"description": "/api/admin/hai_question/\n\nbmax_question.message  = \nbmax_question.title    = "
+									},
+									"response": []
+								},
+								{
+									"name": "delete",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/requestmap/1",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"requestmap",
+												"1"
+											]
+										},
+										"description": "this acction is delete to consult,NOT use in producction"
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "users",
+							"item": [
+								{
+									"name": "firebase",
+									"item": [
+										{
+											"name": "get_by_user",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "bearer {{admin_token}}"
+													}
+												],
+												"url": {
+													"raw": "{{host}}/api/admin/system/user/3/firebase",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"admin",
+														"system",
+														"user",
+														"3",
+														"firebase"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "remove_by_user",
+											"request": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "bearer {{admin_token}}"
+													}
+												],
+												"url": {
+													"raw": "{{host}}/api/admin/system/user/3/firebase",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"admin",
+														"system",
+														"user",
+														"3",
+														"firebase"
+													]
+												},
+												"description": "this acction is delete to consult,NOT use in producction"
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "validation",
+									"item": [
+										{
+											"name": "get_by_user",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "bearer {{admin_token}}"
+													}
+												],
+												"url": {
+													"raw": "{{host}}/api/admin/system/user/1/validation?page=0",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"admin",
+														"system",
+														"user",
+														"1",
+														"validation"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": "0"
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "remove_by_user",
+											"request": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "bearer {{admin_token}}"
+													}
+												],
+												"url": {
+													"raw": "{{host}}/api/admin/system/user/1/validation?id_validation=625052d9143fd92d888d6c37",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"admin",
+														"system",
+														"user",
+														"1",
+														"validation"
+													],
+													"query": [
+														{
+															"key": "id_validation",
+															"value": "625052d9143fd92d888d6c37"
+														}
+													]
+												},
+												"description": "this acction is delete to consult,NOT use in producction"
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "tokens",
+									"item": [
+										{
+											"name": "get_by_user",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "bearer {{admin_token}}"
+													}
+												],
+												"url": {
+													"raw": "{{host}}/api/admin/system/user/1/tokens?page=0",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"admin",
+														"system",
+														"user",
+														"1",
+														"tokens"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": "0"
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "remove_by_user",
+											"request": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "bearer {{admin_token}}"
+													}
+												],
+												"url": {
+													"raw": "{{host}}/api/admin/system/user/1/tokens",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"admin",
+														"system",
+														"user",
+														"1",
+														"tokens"
+													]
+												},
+												"description": "this acction is delete to consult,NOT use in producction"
+											},
+											"response": []
+										},
+										{
+											"name": "remove_by_user_all",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "bearer {{admin_token}}"
+													}
+												],
+												"url": {
+													"raw": "{{host}}/api/admin/system/user/1/tokens?id_token=623e3dd00f4839370ee98a4e",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"admin",
+														"system",
+														"user",
+														"1",
+														"tokens"
+													],
+													"query": [
+														{
+															"key": "id_token",
+															"value": "623e3dd00f4839370ee98a4e"
+														}
+													]
+												},
+												"description": "this acction is delete to consult,NOT use in producction"
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "photos",
+									"item": [
+										{
+											"name": "get_by_user",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "bearer {{admin_token}}"
+													}
+												],
+												"url": {
+													"raw": "{{host}}/api/admin/system/user/11/photos?page=0",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"admin",
+														"system",
+														"user",
+														"11",
+														"photos"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": "0"
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "remove_by_user",
+											"request": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "bearer {{admin_token}}"
+													}
+												],
+												"url": {
+													"raw": "{{host}}/api/admin/system/user/11/photos?id_photo=3",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"admin",
+														"system",
+														"user",
+														"11",
+														"photos"
+													],
+													"query": [
+														{
+															"key": "id_photo",
+															"value": "3"
+														}
+													]
+												},
+												"description": "this acction is delete to consult,NOT use in producction"
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "files",
+									"item": [
+										{
+											"name": "get_by_user",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "bearer {{admin_token}}"
+													}
+												],
+												"url": {
+													"raw": "{{host}}/api/admin/system/user/11/files?page=0",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"admin",
+														"system",
+														"user",
+														"11",
+														"files"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": "0"
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "remove_by_user",
+											"request": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "bearer {{admin_token}}"
+													}
+												],
+												"url": {
+													"raw": "{{host}}/api/admin/system/user/11/files?id_file=3",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"admin",
+														"system",
+														"user",
+														"11",
+														"files"
+													],
+													"query": [
+														{
+															"key": "id_file",
+															"value": "3"
+														}
+													]
+												},
+												"description": "this acction is delete to consult,NOT use in producction"
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "guest",
+									"item": [
+										{
+											"name": "get_all",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "bearer {{admin_token}}"
+													}
+												],
+												"url": {
+													"raw": "{{host}}/api/admin/system/users/guest?page=0&email=doors",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"admin",
+														"system",
+														"users",
+														"guest"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": "0"
+														},
+														{
+															"key": "email",
+															"value": "doors"
+														}
+													]
+												},
+												"description": "Show the answer list"
+											},
+											"response": []
+										},
+										{
+											"name": "modify",
+											"request": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "bearer {{admin_token}}"
+													}
+												],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"key": "validation",
+															"value": "PHONE",
+															"type": "text"
+														},
+														{
+															"key": "status",
+															"value": "ACTIVE",
+															"type": "text",
+															"disabled": true
+														}
+													]
+												},
+												"url": {
+													"raw": "{{host}}/api/admin/system/users/guest?id=1",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"admin",
+														"system",
+														"users",
+														"guest"
+													],
+													"query": [
+														{
+															"key": "id",
+															"value": "1"
+														}
+													]
+												},
+												"description": "/api/admin/hai_question/\n\nbmax_question.message  = \nbmax_question.title    = "
+											},
+											"response": []
+										},
+										{
+											"name": "delete_all",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "bearer {{admin_token}}"
+													}
+												],
+												"url": {
+													"raw": "{{host}}/api/admin/system/users/guest",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"admin",
+														"system",
+														"users",
+														"guest"
+													]
+												},
+												"description": "this acction is delete to consult,NOT use in producction"
+											},
+											"response": []
+										},
+										{
+											"name": "delete",
+											"request": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "bearer {{admin_token}}"
+													}
+												],
+												"url": {
+													"raw": "{{host}}/api/admin/system/users/guest?id=1",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"admin",
+														"system",
+														"users",
+														"guest"
+													],
+													"query": [
+														{
+															"key": "id",
+															"value": "1"
+														}
+													]
+												},
+												"description": "this acction is delete to consult,NOT use in producction"
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "get_all",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/users?page=0&email=doors",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"users"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "0"
+												},
+												{
+													"key": "email",
+													"value": "doors"
+												}
+											]
+										},
+										"description": "Show the answer list"
+									},
+									"response": []
+								},
+								{
+									"name": "get_one",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/user/3",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"user",
+												"3"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "edit",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "validation",
+													"value": "PHONE",
+													"type": "text"
+												},
+												{
+													"key": "status",
+													"value": "ACTIVE",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host}}/api/admin/system/user/3",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"user",
+												"3"
+											]
+										},
+										"description": "/api/admin/hai_question/\n\nbmax_question.message  = \nbmax_question.title    = "
+									},
+									"response": []
+								},
+								{
+									"name": "delete",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/user/3",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"user",
+												"3"
+											]
+										},
+										"description": "this acction is delete to consult,NOT use in producction"
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "payments",
+					"item": [
+						{
+							"name": "realtime",
+							"item": [
+								{
+									"name": "get_all",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/payments/realtime?init=0&limit=10",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"payments",
+												"realtime"
+											],
+											"query": [
+												{
+													"key": "init",
+													"value": "0",
+													"description": "init "
+												},
+												{
+													"key": "limit",
+													"value": "10",
+													"description": "count of items per page"
+												}
+											]
+										},
+										"description": "Show the answer list"
+									},
+									"response": []
+								},
+								{
+									"name": "get_one",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/payment/realtime/6251a0cbf0fd616d0ed8b608",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"payment",
+												"realtime",
+												"6251a0cbf0fd616d0ed8b608"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "edit",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "status",
+													"value": "IN_PROGRESS",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host}}/api/admin/system/payment/realtime/6251a0cbf0fd616d0ed8b608",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"payment",
+												"realtime",
+												"6251a0cbf0fd616d0ed8b608"
+											]
+										},
+										"description": "/api/admin/hai_question/\n\nbmax_question.message  = \nbmax_question.title    = "
+									},
+									"response": []
+								},
+								{
+									"name": "disable",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/payment/realtime/6251a0cbf0fd616d0ed8b608",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"payment",
+												"realtime",
+												"6251a0cbf0fd616d0ed8b608"
+											]
+										},
+										"description": "this acction is delete to consult,NOT use in producction"
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "scheduled",
+							"item": [
+								{
+									"name": "get_all",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/payments/scheduled?init=0&limit=10",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"payments",
+												"scheduled"
+											],
+											"query": [
+												{
+													"key": "init",
+													"value": "0",
+													"description": "init "
+												},
+												{
+													"key": "limit",
+													"value": "10",
+													"description": "count of items per page"
+												}
+											]
+										},
+										"description": "Show the answer list"
+									},
+									"response": []
+								},
+								{
+									"name": "get_one",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/payment/scheduled/6251a0cbf0fd616d0ed8b608",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"payment",
+												"scheduled",
+												"6251a0cbf0fd616d0ed8b608"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "edit",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "status",
+													"value": "IN_PROGRESS",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host}}/api/admin/system/payment/scheduled/6251a0cbf0fd616d0ed8b608",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"payment",
+												"scheduled",
+												"6251a0cbf0fd616d0ed8b608"
+											]
+										},
+										"description": "/api/admin/hai_question/\n\nbmax_question.message  = \nbmax_question.title    = "
+									},
+									"response": []
+								},
+								{
+									"name": "disable",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/payment/scheduled/6251a0cbf0fd616d0ed8b608",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"payment",
+												"scheduled",
+												"6251a0cbf0fd616d0ed8b608"
+											]
+										},
+										"description": "this acction is delete to consult,NOT use in producction"
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "tx",
+							"item": [
+								{
+									"name": "get_all",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/payments/tx?init=0&limit=10",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"payments",
+												"tx"
+											],
+											"query": [
+												{
+													"key": "init",
+													"value": "0",
+													"description": "init "
+												},
+												{
+													"key": "limit",
+													"value": "10",
+													"description": "count of items per page"
+												}
+											]
+										},
+										"description": "Show the answer list"
+									},
+									"response": []
+								},
+								{
+									"name": "get_one",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/payment/tx/6251a0cbf0fd616d0ed8b608",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"payment",
+												"tx",
+												"6251a0cbf0fd616d0ed8b608"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "edit",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "status",
+													"value": "IN_PROGRESS",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host}}/api/admin/system/payment/tx/6251a0cbf0fd616d0ed8b608",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"payment",
+												"tx",
+												"6251a0cbf0fd616d0ed8b608"
+											]
+										},
+										"description": "/api/admin/hai_question/\n\nbmax_question.message  = \nbmax_question.title    = "
+									},
+									"response": []
+								},
+								{
+									"name": "disable",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/payment/tx/6251a0cbf0fd616d0ed8b608",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"payment",
+												"tx",
+												"6251a0cbf0fd616d0ed8b608"
+											]
+										},
+										"description": "this acction is delete to consult,NOT use in producction"
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "users",
+							"item": [
+								{
+									"name": "get_all",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/payments/users?init=0&limit=10",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"payments",
+												"users"
+											],
+											"query": [
+												{
+													"key": "init",
+													"value": "0"
+												},
+												{
+													"key": "limit",
+													"value": "10"
+												}
+											]
+										},
+										"description": "Show the answer list"
+									},
+									"response": []
+								},
+								{
+									"name": "get_one",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/payment/user/6251a0cbf0fd616d0ed8b608",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"payment",
+												"user",
+												"6251a0cbf0fd616d0ed8b608"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "edit",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "status",
+													"value": "IN_PROGRESS",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host}}/api/admin/system/payment/user/6251a0cbf0fd616d0ed8b608",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"payment",
+												"user",
+												"6251a0cbf0fd616d0ed8b608"
+											]
+										},
+										"description": "/api/admin/hai_question/\n\nbmax_question.message  = \nbmax_question.title    = "
+									},
+									"response": []
+								},
+								{
+									"name": "disable",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/payment/user/6251a0cbf0fd616d0ed8b608",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"payment",
+												"user",
+												"6251a0cbf0fd616d0ed8b608"
+											]
+										},
+										"description": "this acction is delete to consult,NOT use in producction"
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "subscriptions",
+					"item": [
+						{
+							"name": "plans",
+							"item": [
+								{
+									"name": "offers",
+									"item": [
+										{
+											"name": "get_all",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "bearer {{admin_token}}"
+													}
+												],
+												"url": {
+													"raw": "{{host}}/api/admin/system/subscriptions/payments?page=0",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"admin",
+														"system",
+														"subscriptions",
+														"payments"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": "0"
+														}
+													]
+												},
+												"description": "Show the answer list"
+											},
+											"response": []
+										},
+										{
+											"name": "edit",
+											"request": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "bearer {{admin_token}}"
+													}
+												],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"key": "status",
+															"value": "IN_PROGRESS",
+															"type": "text"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{host}}/api/admin/system/subscriptions/payments",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"admin",
+														"system",
+														"subscriptions",
+														"payments"
+													]
+												},
+												"description": "/api/admin/hai_question/\n\nbmax_question.message  = \nbmax_question.title    = "
+											},
+											"response": []
+										},
+										{
+											"name": "disable",
+											"request": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "bearer {{admin_token}}"
+													}
+												],
+												"url": {
+													"raw": "{{host}}/api/admin/system/subscriptions/payments",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"admin",
+														"system",
+														"subscriptions",
+														"payments"
+													]
+												},
+												"description": "this acction is delete to consult,NOT use in producction"
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "promotions",
+									"item": [
+										{
+											"name": "get_all",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "bearer {{admin_token}}"
+													}
+												],
+												"url": {
+													"raw": "{{host}}/api/admin/system/subscriptions/payments?page=0",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"admin",
+														"system",
+														"subscriptions",
+														"payments"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": "0"
+														}
+													]
+												},
+												"description": "Show the answer list"
+											},
+											"response": []
+										},
+										{
+											"name": "edit",
+											"request": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "bearer {{admin_token}}"
+													}
+												],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"key": "status",
+															"value": "IN_PROGRESS",
+															"type": "text"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{host}}/api/admin/system/subscriptions/payments",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"admin",
+														"system",
+														"subscriptions",
+														"payments"
+													]
+												},
+												"description": "/api/admin/hai_question/\n\nbmax_question.message  = \nbmax_question.title    = "
+											},
+											"response": []
+										},
+										{
+											"name": "disable",
+											"request": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "bearer {{admin_token}}"
+													}
+												],
+												"url": {
+													"raw": "{{host}}/api/admin/system/subscriptions/payments",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"admin",
+														"system",
+														"subscriptions",
+														"payments"
+													]
+												},
+												"description": "this acction is delete to consult,NOT use in producction"
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "get_all",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/subscriptions/plans?page=0",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"subscriptions",
+												"plans"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "0",
+													"description": "init "
+												}
+											]
+										},
+										"description": "Show the answer list"
+									},
+									"response": []
+								},
+								{
+									"name": "edit",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "id",
+													"value": "627e74d59d76111c35723828",
+													"type": "text"
+												},
+												{
+													"key": "status",
+													"value": "ACTIVE",
+													"description": "['ACTIVE','INACTIVE']",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "price",
+													"value": "11.2",
+													"type": "text"
+												},
+												{
+													"key": "currency",
+													"value": "USD",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "key",
+													"value": "",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "description",
+													"value": "test second time",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "type_operation",
+													"value": "ONE_TIME",
+													"description": "['ONE_TIME','RESERVATION', 'MONTHLY', 'CREDITS']",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host}}/api/admin/system/subscriptions/plans",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"subscriptions",
+												"plans"
+											]
+										},
+										"description": "/api/admin/hai_question/\n\nbmax_question.message  = \nbmax_question.title    = "
+									},
+									"response": []
+								},
+								{
+									"name": "disable",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/subscriptions/plans?id=627e74d59d76111c35723828",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"subscriptions",
+												"plans"
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "627e74d59d76111c35723828"
+												}
+											]
+										},
+										"description": "this acction is delete to consult,NOT use in producction"
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "customers",
+							"item": [
+								{
+									"name": "payments",
+									"item": [
+										{
+											"name": "get_all",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "bearer {{admin_token}}"
+													}
+												],
+												"url": {
+													"raw": "{{host}}/api/admin/system/subscriptions/payments?page=0",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"admin",
+														"system",
+														"subscriptions",
+														"payments"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": "0"
+														}
+													]
+												},
+												"description": "Show the answer list"
+											},
+											"response": []
+										},
+										{
+											"name": "edit",
+											"request": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "bearer {{admin_token}}"
+													}
+												],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"key": "status",
+															"value": "IN_PROGRESS",
+															"type": "text"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{host}}/api/admin/system/subscriptions/payments",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"admin",
+														"system",
+														"subscriptions",
+														"payments"
+													]
+												},
+												"description": "/api/admin/hai_question/\n\nbmax_question.message  = \nbmax_question.title    = "
+											},
+											"response": []
+										},
+										{
+											"name": "disable",
+											"request": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "bearer {{admin_token}}"
+													}
+												],
+												"url": {
+													"raw": "{{host}}/api/admin/system/subscriptions/payments",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"admin",
+														"system",
+														"subscriptions",
+														"payments"
+													]
+												},
+												"description": "this acction is delete to consult,NOT use in producction"
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "get_all",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/subscriptions/customers?page=0",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"subscriptions",
+												"customers"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "0"
+												}
+											]
+										},
+										"description": "Show the answer list"
+									},
+									"response": []
+								},
+								{
+									"name": "get_one",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/subscriptions/customers/1",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"subscriptions",
+												"customers",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "edit",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "status",
+													"value": "IN_PROGRESS",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host}}/api/admin/system/subscriptions/customers/1",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"subscriptions",
+												"customers",
+												"1"
+											]
+										},
+										"description": "/api/admin/hai_question/\n\nbmax_question.message  = \nbmax_question.title    = "
+									},
+									"response": []
+								},
+								{
+									"name": "disable",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/subscriptions/customers/1",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"subscriptions",
+												"customers",
+												"1"
+											]
+										},
+										"description": "this acction is delete to consult,NOT use in producction"
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "reseller",
+							"item": [
+								{
+									"name": "referrals",
+									"item": [
+										{
+											"name": "get_all",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "bearer {{admin_token}}"
+													}
+												],
+												"url": {
+													"raw": "{{host}}/api/admin/system/subscriptions/payments?page=0",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"admin",
+														"system",
+														"subscriptions",
+														"payments"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": "0"
+														}
+													]
+												},
+												"description": "Show the answer list"
+											},
+											"response": []
+										},
+										{
+											"name": "edit",
+											"request": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "bearer {{admin_token}}"
+													}
+												],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"key": "status",
+															"value": "IN_PROGRESS",
+															"type": "text"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{host}}/api/admin/system/subscriptions/payments",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"admin",
+														"system",
+														"subscriptions",
+														"payments"
+													]
+												},
+												"description": "/api/admin/hai_question/\n\nbmax_question.message  = \nbmax_question.title    = "
+											},
+											"response": []
+										},
+										{
+											"name": "disable",
+											"request": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "bearer {{admin_token}}"
+													}
+												],
+												"url": {
+													"raw": "{{host}}/api/admin/system/subscriptions/payments",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"admin",
+														"system",
+														"subscriptions",
+														"payments"
+													]
+												},
+												"description": "this acction is delete to consult,NOT use in producction"
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "credits",
+									"item": [
+										{
+											"name": "get_all",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "bearer {{admin_token}}"
+													}
+												],
+												"url": {
+													"raw": "{{host}}/api/admin/system/subscriptions/payments?page=0",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"admin",
+														"system",
+														"subscriptions",
+														"payments"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": "0"
+														}
+													]
+												},
+												"description": "Show the answer list"
+											},
+											"response": []
+										},
+										{
+											"name": "edit",
+											"request": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "bearer {{admin_token}}"
+													}
+												],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"key": "status",
+															"value": "IN_PROGRESS",
+															"type": "text"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{host}}/api/admin/system/subscriptions/payments",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"admin",
+														"system",
+														"subscriptions",
+														"payments"
+													]
+												},
+												"description": "/api/admin/hai_question/\n\nbmax_question.message  = \nbmax_question.title    = "
+											},
+											"response": []
+										},
+										{
+											"name": "disable",
+											"request": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "bearer {{admin_token}}"
+													}
+												],
+												"url": {
+													"raw": "{{host}}/api/admin/system/subscriptions/payments",
+													"host": [
+														"{{host}}"
+													],
+													"path": [
+														"api",
+														"admin",
+														"system",
+														"subscriptions",
+														"payments"
+													]
+												},
+												"description": "this acction is delete to consult,NOT use in producction"
+											},
+											"response": []
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "topology",
+					"item": [
+						{
+							"name": "network",
+							"item": [
+								{
+									"name": "@get",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/networks?page=0&location=0,0",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"networks"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "0"
+												},
+												{
+													"key": "key",
+													"value": "stage11",
+													"disabled": true
+												},
+												{
+													"key": "location",
+													"value": "0,0"
+												}
+											]
+										},
+										"description": "Show the config list"
+									},
+									"response": []
+								},
+								{
+									"name": "@getOne",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/network/62ae51bd9e1591c54bd8051b",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"network",
+												"62ae51bd9e1591c54bd8051b"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "@add",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{admin_token}}"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"cfg\": {\n        \"translation\": {\n            \"en\": \"Everythink\",\n            \"es\": \"Everythink\"\n        },\n        \"type\": \"public\",\n        \"pass\": \"\",\n        \"message\": {\n            \"en\": \"Your Network Builder\",\n            \"es\": \"El constructor de tu red \"\n        },\n        \"country_network\": \"Argentina\",\n        \"category_type\": \"production\"\n    },\n    \"location\": [\n        2,\n        1\n    ],\n    \"key\": \"everythin1k\"\n}"
+										},
+										"url": {
+											"raw": "{{host}}/api/admin/system/networks",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"networks"
+											]
+										},
+										"description": "key    : key identify\nname   : {} inernationalization name\nenabled: true/false"
+									},
+									"response": []
+								},
+								{
+									"name": "@pubSub",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{admin_token}}"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"key\":\"website\",\n\t\"pass\":\"***\",\n\t\"url_server\":\"example.website.ai\",\n\t\"status\":\"SUBSCRIBED\"\n}"
+										},
+										"url": {
+											"raw": "{{host}}/api/admin/system/networks",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"networks"
+											]
+										},
+										"description": "key    : key identify\nname   : {} inernationalization name\nenabled: true/false"
+									},
+									"response": []
+								},
+								{
+									"name": "@edit",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{admin_token}}"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{ \"cfg\": {\"translation\":{\"en\":\"1Everythink\",\"es\":\"1Everythink\"},\"type\":\"public_pass\",\"pass\":\"\",\"message\":{\"en\":\"Your Network Builder\",\"es\":\"El constructor de tu red 1\"},\n\t\"country_network\":\"Argentina\",\"category_type\":\"production\"\n\t},\"location\":[2,1],\n\t\"key\":\"everythin1k\"\n}"
+										},
+										"url": {
+											"raw": "{{host}}/api/admin/system/network/62ae51bd9e1591c54bd8051b",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"network",
+												"62ae51bd9e1591c54bd8051b"
+											]
+										},
+										"description": "key    : key identify\nname   : {} inernationalization name\nenabled: true/false"
+									},
+									"response": []
+								},
+								{
+									"name": "@uploadUri",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{admin_token}}"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "file",
+													"type": "file",
+													"src": "/Users/rebelius/Desktop/Screen Shot 2022-06-14 at 10.10.42 AM.png"
+												},
+												{
+													"key": "is_icon",
+													"value": "true",
+													"type": "text"
+												},
+												{
+													"key": "key",
+													"value": "everythin1k",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host}}/api/admin/system/upload/networks",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"upload",
+												"networks"
+											]
+										},
+										"description": "key    : key identify\nname   : {} inernationalization name\nenabled: true/false"
+									},
+									"response": []
+								},
+								{
+									"name": "@delete",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/network/5dd00ffc89c6dcab9fad4e19",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"network",
+												"5dd00ffc89c6dcab9fad4e19"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "transfer",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{admin_token}}"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "network_id",
+													"value": "",
+													"type": "text"
+												},
+												{
+													"key": "new_owner",
+													"value": "",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host}}/api/admin/system/company/transfer_ownership",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"company",
+												"transfer_ownership"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"description": "This folder contain the enviroment for the total app!\neg: Personal,Work...etc"
+						},
+						{
+							"name": "community",
+							"item": [
+								{
+									"name": "@get",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/communities?page=0&network_key=low_code_production",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"communities"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "0"
+												},
+												{
+													"key": "network_key",
+													"value": "low_code_production"
+												},
+												{
+													"key": "status",
+													"value": "ACTIVE",
+													"disabled": true
+												}
+											]
+										},
+										"description": "Show the config list"
+									},
+									"response": []
+								},
+								{
+									"name": "@add",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{admin_token}}"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{ \"cfg\": {\"color\":\"cccccc\",\"url\":\"website.com\",\"lang_avaiable\":\"es|en\",\"pass\":\"\",\"translation\":{\"en\":\"Everythink1\",\"es\":\"Everythin111k\"},\"type\":\"public\",\"message\":{\"en\":\"Your Community Builder\",\"es\":\"El constructor de tu comunidad \"},\"icon\":\"https://website.sfo2.digitaloceanspaces.com/communities/website/website.png\"},\n\t\"key\":\"website112\",\n\t\"key_network\":\"low_code_production\",\n\t\"status\":\"ACTIVE\"\n\t\n}"
+										},
+										"url": {
+											"raw": "{{host}}/api/admin/system/communities",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"communities"
+											]
+										},
+										"description": "key    : key identify\nname   : {} inernationalization name\nenabled: true/false"
+									},
+									"response": []
+								},
+								{
+									"name": "@getOne",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/community/62b8bdc3f5c5f0ab77136d69",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"community",
+												"62b8bdc3f5c5f0ab77136d69"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "@pubSub",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{admin_token}}"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"key\":\"website\",\n\t\"pass\":\"***\",\n\t\"url_server\":\"example.website.ai\",\n\t\"status\":\"SUBSCRIBED\"\n}"
+										},
+										"url": {
+											"raw": "{{host}}/api/admin/system/community/62b8bdc3f5c5f0ab77136d69",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"community",
+												"62b8bdc3f5c5f0ab77136d69"
+											]
+										},
+										"description": "key    : key identify\nname   : {} inernationalization name\nenabled: true/false"
+									},
+									"response": []
+								},
+								{
+									"name": "@edit",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{admin_token}}"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{ \"cfg\": {\"url\":\"colab.website.ai\",\"lang_avaiable\":\"es|en\",\"pass\":\"***\",\"translation\":{\"en\":\"Epicor\",\"es\":\"Epicor\"},\"type\":\"public\",\"message\":{\"en\":\"Industry Insight Powers Every Epicor Solution\",\"es\":\"Sea un fabricante inteligente. Descubra las tendencias claves que impulsan\"},\"icon\":\"http://www.website.ai/assets/front_1/images/epicor.png\"},\n\t\"key\":\"website112\",\n\t\"status\":\"ACTIVE\"\n\t\n}"
+										},
+										"url": {
+											"raw": "{{host}}/api/admin/system/community/62b8bdc3f5c5f0ab77136d69",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"community",
+												"62b8bdc3f5c5f0ab77136d69"
+											]
+										},
+										"description": "key    : key identify\nname   : {} inernationalization name\nenabled: true/false"
+									},
+									"response": []
+								},
+								{
+									"name": "@delete",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/community/62b8bdc3f5c5f0ab77136d69",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"community",
+												"62b8bdc3f5c5f0ab77136d69"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "upload_admin",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{admin_token}}"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "file",
+													"type": "file",
+													"src": "/Users/rebelius/Desktop/Screen Shot 2022-06-23 at 9.43.28 PM.png"
+												},
+												{
+													"key": "is_icon",
+													"value": "true",
+													"type": "text"
+												},
+												{
+													"key": "key",
+													"value": "low_code_production_hall",
+													"type": "text"
+												},
+												{
+													"key": "network_key",
+													"value": "low_code_production",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host}}/api/admin/system/upload/community",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"upload",
+												"community"
+											]
+										},
+										"description": "key    : key identify\nname   : {} inernationalization name\nenabled: true/false"
+									},
+									"response": []
+								}
+							],
+							"description": "This folder contain the enviroment for the total app!\neg: Personal,Work...etc"
+						},
+						{
+							"name": "environment",
+							"item": [
+								{
+									"name": "@get",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/environments?page=0&key_community=low_code_production_hall",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"environments"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "0"
+												},
+												{
+													"key": "key_community",
+													"value": "low_code_production_hall"
+												},
+												{
+													"key": "status",
+													"value": "ACTIVE",
+													"disabled": true
+												},
+												{
+													"key": "key",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "name",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "longitude",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "latitude",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "enabled",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "algorithm",
+													"value": "",
+													"disabled": true
+												}
+											]
+										},
+										"description": "Show the config list"
+									},
+									"response": []
+								},
+								{
+									"name": "@add",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{admin_token}}"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{ \n\t\"env_type\":\"public\",\n\t\"env_pass\":\"***\",\n\t\"color\":\"cccccc\",\n\t\"key_community\":\"low_code_production_hall\",\n\t\"key\":\"gueswewqewqe1\",\n\t\"name\":{\"es\":\"Invitadoq\",\"en\":\"Guestqqq\"}\n}"
+										},
+										"url": {
+											"raw": "{{host}}/api/admin/system/environments",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"environments"
+											]
+										},
+										"description": "key    : key identify\nname   : {} inernationalization name\nenabled: true/false"
+									},
+									"response": []
+								},
+								{
+									"name": "@getOne",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/environment/62b8f0d2ba13772b557e4f7a",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"environment",
+												"62b8f0d2ba13772b557e4f7a"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "@pubSub",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{admin_token}}"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"key\":\"website\",\n\t\"pass\":\"***\",\n\t\"url_server\":\"example.website.ai\",\n\t\"status\":\"SUBSCRIBED\"\n}"
+										},
+										"url": {
+											"raw": "{{host}}/api/admin/system/environment/62b8f0d2ba13772b557e4f7a",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"environment",
+												"62b8f0d2ba13772b557e4f7a"
+											]
+										},
+										"description": "key    : key identify\nname   : {} inernationalization name\nenabled: true/false"
+									},
+									"response": []
+								},
+								{
+									"name": "@edit",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{admin_token}}"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{ \n\t\"env_type\":\"public\",\n\t\"env_pass\":\"***\",\n\t\"color\":\"cccccc\",\n\t\"key_community\":\"website\",\n\t\"key\":\"guesw11ewqewqe2\",\n\t\"name\":{\"es\":\"Invitadoq\",\"en\":\"Guestqqq\"}\n}"
+										},
+										"url": {
+											"raw": "{{host}}/api/admin/system/environment/62b8f0d2ba13772b557e4f7a",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"environment",
+												"62b8f0d2ba13772b557e4f7a"
+											]
+										},
+										"description": "key    : key identify\nname   : {} inernationalization name\nenabled: true/false"
+									},
+									"response": []
+								},
+								{
+									"name": "@delete",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{admin_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/admin/system/environment/62b8f0d2ba13772b557e4f7a",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"system",
+												"environment",
+												"62b8f0d2ba13772b557e4f7a"
+											]
+										},
+										"description": "key    : key identify\nname   : {} inernationalization name\nenabled: true/false"
+									},
+									"response": []
+								}
+							],
+							"description": "This folder contain the enviroment for the total app!\neg: Personal,Work...etc"
+						}
+					]
+				},
+				{
+					"name": "swagger",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api-docs",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api-docs"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "unregistered",
+					"item": [
+						{
+							"name": "login",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/acl/login?email=matias@doors.digital&password=d00rs123",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"acl",
+										"login"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "matias@doors.digital"
+										},
+										{
+											"key": "password",
+											"value": "d00rs123"
+										},
+										{
+											"key": "firebase_uid",
+											"value": "not_implemented",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "caro@doors.digital",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "draper2021",
+											"type": "text"
+										},
+										{
+											"key": "firebase_uid",
+											"value": "111",
+											"type": "text"
+										},
+										{
+											"key": "network_key",
+											"value": "pdie",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/acl/login",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"acl",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "login_guest",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/acl/login",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"acl",
+										"login"
+									],
+									"query": [
+										{
+											"key": "firebase_uid",
+											"value": "not_implemented",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create_user",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "first_name",
+											"value": "Carolina",
+											"type": "text"
+										},
+										{
+											"key": "photo",
+											"value": "website.com/image/profile.png",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "5491164616323",
+											"type": "text"
+										},
+										{
+											"key": "latitude",
+											"value": "+44.1111",
+											"type": "text"
+										},
+										{
+											"key": "longitude",
+											"value": "+44.1111",
+											"type": "text"
+										},
+										{
+											"key": "avatar",
+											"value": "website.com/image/profile.png",
+											"type": "text"
+										},
+										{
+											"key": "device_key",
+											"value": "WEB",
+											"description": "ANDROID|IOS|WEB",
+											"type": "text"
+										},
+										{
+											"key": "device_token",
+											"value": "dasdqpoj13o4i1",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "matia1111s@website.ai",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "draper2021",
+											"type": "text"
+										},
+										{
+											"key": "firebase_uid",
+											"value": "11",
+											"type": "text"
+										},
+										{
+											"key": "last_name",
+											"value": "Fogliato",
+											"type": "text"
+										},
+										{
+											"key": "network_key",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/acl/register",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"acl",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create_user",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "first_name",
+											"value": "Carolina",
+											"type": "text"
+										},
+										{
+											"key": "photo",
+											"value": "https://website.com/img/matias-b.png",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "5491164616123",
+											"type": "text"
+										},
+										{
+											"key": "latitude",
+											"value": "+44.1111",
+											"type": "text"
+										},
+										{
+											"key": "longitude",
+											"value": "+44.1111",
+											"type": "text"
+										},
+										{
+											"key": "avatar",
+											"value": "https://website.com/img/avatar.png",
+											"type": "text"
+										},
+										{
+											"key": "device_key",
+											"value": "WEB",
+											"description": "ANDROID|IOS|WEB",
+											"type": "text"
+										},
+										{
+											"key": "device_token",
+											"value": "dasdqpoj13o4i1",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "matias2@website.ai",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "draper2021",
+											"type": "text"
+										},
+										{
+											"key": "firebase_uid",
+											"value": "11",
+											"type": "text"
+										},
+										{
+											"key": "last_name",
+											"value": "Fogliato",
+											"type": "text"
+										},
+										{
+											"key": "network_key",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/acl/register",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"acl",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "validate_send_code",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "caro@lee.ai12",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/acl/validate",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"acl",
+										"validate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "validate_verify_code",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "id",
+											"value": "62a633c4f87c8cd7dbfddd39",
+											"type": "text"
+										},
+										{
+											"key": "code",
+											"value": "355197",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/acl/validate",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"acl",
+										"validate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "validate_change_field",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "id",
+											"value": "623be48d831e5a229caf48ff",
+											"type": "text"
+										},
+										{
+											"key": "new_value",
+											"value": "5491164616133",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/acl/validate",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"acl",
+										"validate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "forgot",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "matia1111s@website.ai",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/acl/forgot",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"acl",
+										"forgot"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "forgot_code",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "id",
+											"value": "623c976582f79d36481df254",
+											"type": "text"
+										},
+										{
+											"key": "code",
+											"value": "637765",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "asdasd",
+											"type": "text"
+										},
+										{
+											"key": "force_close_sessions",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/acl/forgot",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"acl",
+										"forgot"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "refresh_token",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "token",
+											"value": "R2Pyp8JOuyCHpKs1jAFORpk4BDXZMgCWJRpKKLJp3pUGdBzsDAZWs4rTXFOq7MuKLlcmQfPjyJmlTkGQj4zqxaQqP49Prox81SDcSza67xcv9qGsX3SZcMkTpLOTgyXHENBp6OfFY5lauNDn1laY70ifgeI10nq1IzTUKBUVf1vWYNZqUozOKYY5xUQ3WvDPpErD0fhjwJdOyYavbAGkzVCrAXVMlJF6ohcifYeOHRTkyKKOnkKlJuba1EYFDowT",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/acl/refresh_token",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"acl",
+										"refresh_token"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "public",
+					"item": [
+						{
+							"name": "countries",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/static/countries",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"static",
+										"countries"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "currencies",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/static/country/currency?country_name=Argentina",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"static",
+										"country",
+										"currency"
+									],
+									"query": [
+										{
+											"key": "country_name",
+											"value": "Argentina"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "networks",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/static/networks?key_category=stage&latitude=-34.6037&longitude=-58.381",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"static",
+										"networks"
+									],
+									"query": [
+										{
+											"key": "key_category",
+											"value": "stage"
+										},
+										{
+											"key": "latitude",
+											"value": "-34.6037"
+										},
+										{
+											"key": "longitude",
+											"value": "-58.381"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "network_details",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/static/network?id=62a517f940d2bd31620aea53",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"static",
+										"network"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "62a517f940d2bd31620aea53"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "network_categories",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/static/network_categories",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"static",
+										"network_categories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ranked_networks",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/static/ranked_networks?key_category=stage&latitude=-34.6037&longitude=-58.381&page=0",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"static",
+										"ranked_networks"
+									],
+									"query": [
+										{
+											"key": "key_category",
+											"value": "stage"
+										},
+										{
+											"key": "latitude",
+											"value": "-34.6037"
+										},
+										{
+											"key": "longitude",
+											"value": "-58.381"
+										},
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "network_type",
+											"value": "public",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "communities",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/static/communities?key_network=low_code_stage",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"static",
+										"communities"
+									],
+									"query": [
+										{
+											"key": "key_network",
+											"value": "low_code_stage"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "environments",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/static/environments?key_community=low_code_stage_hall",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"static",
+										"environments"
+									],
+									"query": [
+										{
+											"key": "key_community",
+											"value": "low_code_stage_hall"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "environmentsv1",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/static/environmentsv1?key_community=low_code_stage_hall&key_env=low_code_stage_hall_admin",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"static",
+										"environmentsv1"
+									],
+									"query": [
+										{
+											"key": "key_community",
+											"value": "low_code_stage_hall"
+										},
+										{
+											"key": "key_env",
+											"value": "low_code_stage_hall_admin"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user_data",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/static/user_data?id=62a633c3f87c8cd7dbfddd2b",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"static",
+										"user_data"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "62a633c3f87c8cd7dbfddd2b"
+										},
+										{
+											"key": "key_env",
+											"value": "low_code_stage_hall_admin",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "sexual_orientation",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/static/sexual_orientation",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"static",
+										"sexual_orientation"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "test_cdn",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/Users/rebelius/Desktop/Screen Shot 2020-05-25 at 13.18.36.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/static/test_cdn",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"static",
+										"test_cdn"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "test_email",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/static/test_send_email?email=matiasbaglieri@gmail.com",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"static",
+										"test_send_email"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "matiasbaglieri@gmail.com"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "test_quota_fix_windows",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/static/test_quota_fix_window",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"static",
+										"test_quota_fix_window"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "test_quota_fix_windows_uri",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/static/test_quota_fix_window_uri",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"static",
+										"test_quota_fix_window_uri"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "test_quota_fix_windows_uri1",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/static/test_quota_fix_window_uri1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"static",
+										"test_quota_fix_window_uri1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "test_quota_slide_log",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/static/test_quota_slide_log",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"static",
+										"test_quota_slide_log"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "test_quota_slide_window",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/static/test_quota_slide_window",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"static",
+										"test_quota_slide_window"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "profile",
+					"item": [
+						{
+							"name": "me",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/me",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"me"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "edit_profile",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"relationship\": \"single\"\n}"
+								},
+								"url": {
+									"raw": "{{host}}/api/me",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"me"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "logout",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "firebase_token",
+											"value": "d5_v0B9YF2A:APA91bEszry8XMLS7u7DaG-9c_oikqr_Wu8mfgh5BIyfXRRO9cbKujJwjhaqaMfOh9qoW9Zj4ORL4u-Hv4GwRaOG22Zy8mGRLl4K3yj1eE2Jc-YdUR2vLpmCQFwyocZLZJuPx-A9Gx2c",
+											"type": "text"
+										},
+										{
+											"key": "device_key",
+											"value": "ANDROID",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/api/logout",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"logout"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "devices_connected",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/me/devices",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"devices"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "devices_connected",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/me/devices?id=623e741acbbb72cb4364c263",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"devices"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "623e741acbbb72cb4364c263"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "upload_photo_cover",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/Users/rebelius/Desktop/Screen Shot 2022-04-18 at 12.52.53 PM.png"
+										},
+										{
+											"key": "upload_type",
+											"value": "cover",
+											"description": "photo|cover",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/api/me/photos",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"photos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get_files",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/me/files?page=0",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"files"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "upload_file",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/Users/rebelius/Desktop/Screen Shot 2022-04-06 at 5.34.23 PM.png"
+										},
+										{
+											"key": "upload_type",
+											"value": "cover",
+											"description": "photo|cover",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/api/me/files",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"files"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "remove_file",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/me/devices?id_file=1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"devices"
+									],
+									"query": [
+										{
+											"key": "id_file",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "change_password",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"password\":\"R1c02020\"}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/api/me/change_password",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"change_password"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "phone_email",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "new_value",
+											"value": "5491164611111",
+											"type": "text"
+										},
+										{
+											"key": "type_op",
+											"value": "PHONE",
+											"description": "PHONE|EMAIL",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/api/me/phone_email",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"phone_email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "phone_email",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "id",
+											"value": "623f887904d2d8385681690b",
+											"type": "text"
+										},
+										{
+											"key": "code",
+											"value": "797705",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/api/me/phone_email",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"phone_email"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "qtask",
+					"item": [
+						{
+							"name": "get_all",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/me/tasks?init=0&limit=10",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"tasks"
+									],
+									"query": [
+										{
+											"key": "init",
+											"value": "0",
+											"description": "init "
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"description": "count of items per page"
+										}
+									]
+								},
+								"description": "Show the answer list"
+							},
+							"response": []
+						},
+						{
+							"name": "get_one",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/me/task/624c96aabe4b069ef64364ae",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"task",
+										"624c96aabe4b069ef64364ae"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "edit",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "status",
+											"value": "IN_PROGRESS",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/api/me/task/624cf478c97f4d864be1d45c",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"task",
+										"624cf478c97f4d864be1d45c"
+									]
+								},
+								"description": "/api/admin/hai_question/\n\nbmax_question.message  = \nbmax_question.title    = "
+							},
+							"response": []
+						},
+						{
+							"name": "disable",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/me/task/624c96aabe4b069ef64364ae",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"task",
+										"624c96aabe4b069ef64364ae"
+									]
+								},
+								"description": "this acction is delete to consult,NOT use in producction"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "payments",
+					"item": [
+						{
+							"name": "get_cards",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/me/payments/cards?page=0",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"payments",
+										"cards"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0",
+											"description": "init "
+										}
+									]
+								},
+								"description": "Show the answer list"
+							},
+							"response": []
+						},
+						{
+							"name": "add_card",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "card",
+											"value": "4242424242424243",
+											"type": "text"
+										},
+										{
+											"key": "mmyy",
+											"value": "1225",
+											"type": "text"
+										},
+										{
+											"key": "holder",
+											"value": "Test Card",
+											"type": "text"
+										},
+										{
+											"key": "code",
+											"value": "code",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/api/me/payments/cards",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"payments",
+										"cards"
+									]
+								},
+								"description": "/api/admin/hai_question/\n\nbmax_question.message  = \nbmax_question.title    = "
+							},
+							"response": []
+						},
+						{
+							"name": "edit_card",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{host}}/api/me/payments/cards?id=6282ef160d122c794cc85560&is_primary=true&status=ACTIVE",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"payments",
+										"cards"
+									],
+									"query": [
+										{
+											"key": "card",
+											"value": "4242424242424242",
+											"disabled": true
+										},
+										{
+											"key": "mmyy",
+											"value": "1225",
+											"disabled": true
+										},
+										{
+											"key": "holder",
+											"value": "Test Card",
+											"disabled": true
+										},
+										{
+											"key": "code",
+											"value": "123",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "6282ef160d122c794cc85560"
+										},
+										{
+											"key": "is_primary",
+											"value": "true"
+										},
+										{
+											"key": "status",
+											"value": "ACTIVE",
+											"description": "'PENDING','ACTIVE', 'DEACTIVATED', 'REMOVED', 'OVERQUOTA', 'LIMITED'"
+										}
+									]
+								},
+								"description": "/api/admin/hai_question/\n\nbmax_question.message  = \nbmax_question.title    = "
+							},
+							"response": []
+						},
+						{
+							"name": "pay",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "type",
+											"value": "SYSTEM",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/api/me/payments/pay",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"payments",
+										"pay"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": "SYSTEM",
+											"disabled": true
+										}
+									]
+								},
+								"description": "/api/admin/hai_question/\n\nbmax_question.message  = \nbmax_question.title    = "
+							},
+							"response": []
+						},
+						{
+							"name": "txs",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/me/payments/txs?page=0",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"payments",
+										"txs"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0",
+											"description": "init "
+										}
+									]
+								},
+								"description": "Show the answer list"
+							},
+							"response": []
+						},
+						{
+							"name": "tx",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/me/payment/history/6282f09a842e1310d3d7314a",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"payment",
+										"history",
+										"6282f09a842e1310d3d7314a"
+									]
+								},
+								"description": "Show the answer list"
+							},
+							"response": []
+						},
+						{
+							"name": "tx_remove",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/me/payment/history/627e8a6ca8e5be6117a88e36",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"payment",
+										"history",
+										"627e8a6ca8e5be6117a88e36"
+									]
+								},
+								"description": "this acction is delete to consult,NOT use in producction"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "subscriptions",
+					"item": [
+						{
+							"name": "txs",
+							"item": [
+								{
+									"name": "txs",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{user_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/me/subscriptions/txs?page=0",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"me",
+												"subscriptions",
+												"txs"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "0",
+													"description": "init "
+												}
+											]
+										},
+										"description": "Show the answer list"
+									},
+									"response": []
+								},
+								{
+									"name": "get_tx",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{user_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/me/subscriptions/tx/627ea056a62df0230358da93",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"me",
+												"subscriptions",
+												"tx",
+												"627ea056a62df0230358da93"
+											]
+										},
+										"description": "Show the answer list"
+									},
+									"response": []
+								},
+								{
+									"name": "modify",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{user_token}}"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "status",
+													"value": "ACTIVE",
+													"description": "['PENDING','ACTIVE', 'DEACTIVATED', 'REMOVED', 'OVERQUOTA', 'LIMITED']",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host}}/api/me/subscriptions/tx/627ea056a62df0230358da93",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"me",
+												"subscriptions",
+												"tx",
+												"627ea056a62df0230358da93"
+											]
+										},
+										"description": "/api/admin/hai_question/\n\nbmax_question.message  = \nbmax_question.title    = "
+									},
+									"response": []
+								},
+								{
+									"name": "disable",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{user_token}}"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/api/me/subscriptions/tx/627ea056a62df0230358da93",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"api",
+												"me",
+												"subscriptions",
+												"tx",
+												"627ea056a62df0230358da93"
+											]
+										},
+										"description": "this acction is delete to consult,NOT use in producction"
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "plans",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/me/subscriptions/plans?page=0",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"subscriptions",
+										"plans"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0",
+											"description": "init "
+										}
+									]
+								},
+								"description": "Show the answer list"
+							},
+							"response": []
+						},
+						{
+							"name": "get_cart",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/me/subscriptions/cart",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"subscriptions",
+										"cart"
+									]
+								},
+								"description": "Show the answer list"
+							},
+							"response": []
+						},
+						{
+							"name": "add_cart",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{host}}/api/me/subscriptions/cart?id=6282e8ea8f6e27ee8f17e8d8",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"subscriptions",
+										"cart"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "6282e8ea8f6e27ee8f17e8d8"
+										}
+									]
+								},
+								"description": "/api/admin/hai_question/\n\nbmax_question.message  = \nbmax_question.title    = "
+							},
+							"response": []
+						},
+						{
+							"name": "remove_to_cart",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/me/subscriptions/cart",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"subscriptions",
+										"cart"
+									],
+									"query": [
+										{
+											"key": "type",
+											"value": "SYSTEM",
+											"description": "'SYSTEM','MERCHANT','COMMUNITY','ENVIRONMENT'",
+											"disabled": true
+										}
+									]
+								},
+								"description": "this acction is delete to consult,NOT use in producction"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "quota",
+					"item": []
+				},
+				{
+					"name": "center",
+					"item": [
+						{
+							"name": "get_notifications",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/me/center/notifications?key_network=low_code_stage&page=0",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"center",
+										"notifications"
+									],
+									"query": [
+										{
+											"key": "key_network",
+											"value": "low_code_stage"
+										},
+										{
+											"key": "page",
+											"value": "0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add_notifications",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "id_user",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "state",
+											"value": "0",
+											"description": "0,1,2,3",
+											"type": "text"
+										},
+										{
+											"key": "network",
+											"value": "low_code_stage",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/api/me/center/notifications",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"center",
+										"notifications"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "notifications_readed",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{host}}/api/me/center/notifications?id=6293fe3bad11a8039e4be2fd",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"center",
+										"notifications"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "6293fe3bad11a8039e4be2fd"
+										},
+										{
+											"key": "status",
+											"value": "READED",
+											"description": "READED,UNREAD",
+											"disabled": true
+										},
+										{
+											"key": "network",
+											"value": "low_code_stage",
+											"disabled": true
+										}
+									]
+								},
+								"description": "key    : key identify\nname   : {} inernationalization name\nenabled: true/false"
+							},
+							"response": []
+						},
+						{
+							"name": "remove_notifications",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{host}}/api/me/center/notifications?id=6293fe3bad11a8039e4be2fd",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"center",
+										"notifications"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "6293fe3bad11a8039e4be2fd"
+										},
+										{
+											"key": "network",
+											"value": "low_code_stage",
+											"disabled": true
+										}
+									]
+								},
+								"description": "key    : key identify\nname   : {} inernationalization name\nenabled: true/false"
+							},
+							"response": []
+						},
+						{
+							"name": "get_social_profile",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/me/center/profile?page=0&id=6282e8e98f6e27ee8f17e76d",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"center",
+										"profile"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "id",
+											"value": "6282e8e98f6e27ee8f17e76d"
+										},
+										{
+											"key": "id_product",
+											"value": "1186",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get_followers",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/me/center/relationships?page=0&nickname=matias@doors.digital",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"center",
+										"relationships"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "nickname",
+											"value": "matias@doors.digital"
+										},
+										{
+											"key": "id_product",
+											"value": "1186",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "follow_unfollow",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "id",
+											"value": "18",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/api/me/center/relationships",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"center",
+										"relationships"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "topology",
+					"item": [
+						{
+							"name": "auth networks",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/networks?key_category=stage&latitude=-34.6037&longitude=-58.381",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"networks"
+									],
+									"query": [
+										{
+											"key": "key_category",
+											"value": "stage"
+										},
+										{
+											"key": "latitude",
+											"value": "-34.6037"
+										},
+										{
+											"key": "longitude",
+											"value": "-58.381"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "auth communities",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/communities?key_network=low_code_stage&latitude=-34.6037345&longitude=-58.3837591&radius=0.80827",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"communities"
+									],
+									"query": [
+										{
+											"key": "key_network",
+											"value": "low_code_stage"
+										},
+										{
+											"key": "latitude",
+											"value": "-34.6037345"
+										},
+										{
+											"key": "longitude",
+											"value": "-58.3837591"
+										},
+										{
+											"key": "radius",
+											"value": "0.80827"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "auth environments",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/environments?key_community=low_code_stage_hall&network=low_code_stage",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"environments"
+									],
+									"query": [
+										{
+											"key": "key_community",
+											"value": "low_code_stage_hall"
+										},
+										{
+											"key": "network",
+											"value": "low_code_stage"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "auth network_categories",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/network_categories?key=production&status=ACTIVE,INACTIVE",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"network_categories"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "production"
+										},
+										{
+											"key": "status",
+											"value": "ACTIVE,INACTIVE"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "myNetworks",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/me/networks?page=0&status=SUBSCRIBED,UNSUBSCRIBED",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"networks"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "status",
+											"value": "SUBSCRIBED,UNSUBSCRIBED"
+										}
+									]
+								},
+								"description": "Show the config list"
+							},
+							"response": []
+						},
+						{
+							"name": "networks pubSub",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"key\":\"n_ar\",\n\t\"pass\":\"***\",\n\t\"status\":\"SUSCRIBE\"\n}"
+								},
+								"url": {
+									"raw": "{{host}}/api/me/networks",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"networks"
+									]
+								},
+								"description": "key    : key identify\nname   : {} inernationalization name\nenabled: true/false"
+							},
+							"response": []
+						},
+						{
+							"name": "mycommunities",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/me/communities?network_key=low_code_stage&status=SUBSCRIBED,UNSUBSCRIBED",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"communities"
+									],
+									"query": [
+										{
+											"key": "network_key",
+											"value": "low_code_stage"
+										},
+										{
+											"key": "status",
+											"value": "SUBSCRIBED,UNSUBSCRIBED"
+										}
+									]
+								},
+								"description": "Show the config list"
+							},
+							"response": []
+						},
+						{
+							"name": "communities pubSub",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"key\":\"website_technology\",\n\t\"pass\":\"***\",\n\t\"status\":\"SUBSCRIBED\"\n}"
+								},
+								"url": {
+									"raw": "{{host}}/api/me/communities",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"communities"
+									]
+								},
+								"description": "key    : key identify\nname   : {} inernationalization name\nenabled: true/false"
+							},
+							"response": []
+						},
+						{
+							"name": "myenvironments",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/me/environments?key_community=low_code_stage_hall&status=SUB,UNSUB",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"environments"
+									],
+									"query": [
+										{
+											"key": "key_community",
+											"value": "low_code_stage_hall"
+										},
+										{
+											"key": "status",
+											"value": "SUB,UNSUB"
+										}
+									]
+								},
+								"description": "Show the config list"
+							},
+							"response": []
+						},
+						{
+							"name": "environments",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "key_community",
+											"value": "low_code_stage_hall",
+											"type": "text"
+										},
+										{
+											"key": "key",
+											"value": "test1",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "env_type",
+											"value": "public",
+											"type": "text"
+										},
+										{
+											"key": "env_pass",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "color",
+											"value": "000000",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/api/me/environments",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"environments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "pubSub Environment",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"key_community\":\"low_code_stage_hall\",\"key\":\"test\",\"pass\":\"***\",\"network\":\"low_code_stage\",\"status\":\"SUBSCRIBED\"}"
+								},
+								"url": {
+									"raw": "{{host}}/api/me/environments",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"environments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "environment_me",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/me/settings/enviroment?id=5fc438feaf8c4a0ce766be19",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"settings",
+										"enviroment"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "5fc438feaf8c4a0ce766be19"
+										}
+									]
+								},
+								"description": "Show the config list"
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "business",
+			"item": [
+				{
+					"name": "topology",
+					"item": [
+						{
+							"name": "uploadCommunities",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{user_token}}"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/Users/rebelius/Desktop/Screen Shot 2020-09-23 at 19.27.55.png"
+										},
+										{
+											"key": "key",
+											"value": "website_technology",
+											"type": "text"
+										},
+										{
+											"key": "is_icon",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/api/admin/upload/community",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"upload",
+										"community"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "uploadNetwork",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{user_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/Users/rebelius/Desktop/Screen Shot 2020-09-23 at 19.27.55.png"
+										},
+										{
+											"key": "key",
+											"value": "n_website",
+											"type": "text"
+										},
+										{
+											"key": "is_icon",
+											"value": "false",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/api/admin/upload/networks",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"upload",
+										"networks"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "developer",
+			"item": [
+				{
+					"name": "oauth2",
+					"item": [
+						{
+							"name": "get_token",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic bWF0aWFzMkB0ZWNobm9yaWRlcy5jb206YXNkYXNk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "code",
+											"value": "cL8FuWdysDtLbgZJ",
+											"type": "text"
+										},
+										{
+											"key": "grant_type",
+											"value": "authorization_code",
+											"type": "text"
+										},
+										{
+											"key": "redirect_uri",
+											"value": "http://localhost:8000",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/api/oauth2/token",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"oauth2",
+										"token"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "oauth2_add_client",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic bWF0aWFzMkB0ZWNobm9yaWRlcy5jb206YXNkYXNk"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Beer Locker Notifier",
+											"type": "text"
+										},
+										{
+											"key": "id",
+											"value": "this_is_my_id",
+											"type": "text"
+										},
+										{
+											"key": "secret",
+											"value": "this_is_my_secret",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/api/clients",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"clients"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "swagger",
+					"item": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,12 @@
+[
+    {
+        "key": "stage",
+        "status": "ACTIVE",
+        "cfg":{"color":"cccccc","lang_avaiable":"es|en","translation":{"en":"Stage","es":"Pre-Produccion"},"type_c":"cccccc","image":"https://your-website-image-category","icon":"fa-2x fa fa-heartbeat"}
+    },
+    {
+        "key": "production",
+        "status": "ACTIVE",
+        "cfg":{"color":"3366ff","lang_avaiable":"es|en","translation":{"en":"Production","es":"Produccion"},"type_c":"cccccc","image":"https://your-website-image-category","icon":"fa-2x fa fa-home"}
+    }
+]

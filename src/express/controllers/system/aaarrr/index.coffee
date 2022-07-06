@@ -1,0 +1,7 @@
+@users         = require './reseller_prospects'
+@awareness     = require './reseller_awareness'
+@acquisitions  = require './reseller_acquisitions'
+@activations   = require './reseller_activations'
+@retentions    = require './reseller_retentions'
+@revenues      = require './reseller_revenues'
+@referrals     = require './reseller_referrals'
